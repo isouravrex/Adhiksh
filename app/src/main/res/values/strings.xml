@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Adhiksh</string>
+    <string name="noc_prompt">Choose a country</string>
+
+    <string-array name="noc_arrays">
+        <item>Job</item>
+        <item>Loan</item>
+        <item>Property</item>
+        <item>Vehicle</item>
+    </string-array>
+</resources>
