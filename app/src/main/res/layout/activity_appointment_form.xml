@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".NOCForm">
+    tools:context=".AppointmentForm">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -25,16 +24,16 @@
                 android:layout_marginTop="25dp"
                 android:layout_marginLeft="20dp"
                 android:fontFamily="@font/poppins_medium"
-                android:text="NOC Form"
+                android:text="Appointment Form"
                 android:textAlignment="viewStart"
                 android:textColor="@color/blue"
                 android:textSize="30sp" />
 
-<!--            <com.jaredrummler.materialspinner.MaterialSpinner-->
-<!--                android:id="@+id/spinner"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="56dp"-->
-<!--                />-->
+            <!--            <com.jaredrummler.materialspinner.MaterialSpinner-->
+            <!--                android:id="@+id/spinner"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="56dp"-->
+            <!--                />-->
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -48,7 +47,7 @@
                     android:layout_height="wrap_content"
                     android:entries="@array/noc_arrays"
                     android:spinnerMode="dropdown"
-                    android:hint="Category"/>
+                    android:hint="Select Authority"/>
             </com.google.android.material.textfield.TextInputLayout>
 
             <Spinner
@@ -60,6 +59,47 @@
                 android:layout_marginRight="16dp"
                 android:entries="@array/noc_arrays"
                 android:spinnerMode="dropdown" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="0dp"
+                android:paddingBottom="0dp">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="162dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:hint="Select Date*">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/editDate"
+                        android:layout_width="147dp"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:fontFamily="@font/poppins"
+                        android:inputType="date" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:hint="Time*">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/editTime"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:ems="10"
+                        android:fontFamily="@font/poppins"
+                        android:inputType="time" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
 
             <com.google.android.material.textfield.TextInputLayout
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -106,10 +146,40 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="16dp"
-                android:hint="Aadhar No.*">
+                android:hint="Date of Birth*">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/editAadhar"
+                    android:id="@+id/editDob"
+                    android:layout_width="147dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:fontFamily="@font/poppins"
+                    android:inputType="date" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:hint="Email ID*">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins"
+                    android:inputType="textEmailAddress" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:hint="Mobile No.*">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editMobileNo"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:ems="10"
@@ -133,25 +203,9 @@
                     android:inputType="textMultiLine" />
             </com.google.android.material.textfield.TextInputLayout>
 
-            <com.google.android.material.textfield.TextInputLayout
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="16dp"
-                android:hint="Mobile No.*">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/editMobileNo"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:fontFamily="@font/poppins"
-                    android:inputType="number" />
-            </com.google.android.material.textfield.TextInputLayout>
-
 
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/btn_requestNoc"
+                android:id="@+id/btn_submitAppointment"
                 style="@style/Widget.MaterialComponents.Button"
                 android:layout_width="match_parent"
                 android:layout_height="75dp"

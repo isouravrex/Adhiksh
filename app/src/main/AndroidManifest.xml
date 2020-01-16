@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".NOCForm"></activity>
+        <activity android:name=".AppointmentForm"></activity>
+        <activity android:name=".NOCForm" />
         <activity android:name=".SignUp" />
         <activity android:name=".MainActivity">
             <intent-filter>
