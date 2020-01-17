@@ -8,22 +8,20 @@ import android.view.View;
 
 import com.google.android.material.button.MaterialButton;
 
-public class AppointmentForm extends AppCompatActivity {
+public class ComplaintForm extends AppCompatActivity {
 
     MaterialButton submit;
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_appointment_form);
+        setContentView(R.layout.activity_complaint_form);
         setUIViews();
 
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(AppointmentForm.this, NOCForm.class));
+                startActivity(new Intent(ComplaintForm.this, FirForm.class));
             }
         });
 
@@ -31,6 +29,7 @@ public class AppointmentForm extends AppCompatActivity {
 
     private void setUIViews(){
 
-        submit = findViewById(R.id.btn_submitAppointment);
+        submit = findViewById(R.id.btn_submitComplaint);
     }
+
 }
