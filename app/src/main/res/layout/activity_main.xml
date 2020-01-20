@@ -28,7 +28,8 @@
                 android:textAlignment="center"
                 android:textAllCaps="true"
                 android:textColor="@color/blue"
-                android:textSize="30sp" />
+                android:textSize="30sp"
+                android:textStyle="bold|italic" />
 
             <RadioGroup
                 android:layout_width="match_parent"

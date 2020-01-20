@@ -23,7 +23,7 @@ public class AppointmentForm extends AppCompatActivity {
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(AppointmentForm.this, NOCForm.class));
+                startActivity(new Intent(AppointmentForm.this, FormSubmission.class));
             }
         });
 

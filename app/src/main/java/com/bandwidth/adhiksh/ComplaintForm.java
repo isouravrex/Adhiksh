@@ -21,7 +21,7 @@ public class ComplaintForm extends AppCompatActivity {
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(ComplaintForm.this, FirForm.class));
+                startActivity(new Intent(ComplaintForm.this, FormSubmission.class));
             }
         });
 

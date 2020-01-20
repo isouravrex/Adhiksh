@@ -234,7 +234,7 @@
 
 
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/btn_submitAppointment"
+                android:id="@+id/btn_submitFir"
                 style="@style/Widget.MaterialComponents.Button"
                 android:layout_width="match_parent"
                 android:layout_height="75dp"

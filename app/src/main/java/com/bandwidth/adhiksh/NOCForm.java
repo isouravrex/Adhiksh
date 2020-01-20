@@ -22,7 +22,7 @@ public class NOCForm extends AppCompatActivity {
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(NOCForm.this, ComplaintForm.class));
+                startActivity(new Intent(NOCForm.this, FormSubmission.class));
             }
         });
 
