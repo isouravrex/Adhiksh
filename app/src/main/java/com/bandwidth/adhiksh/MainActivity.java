@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         setUIViews();
-        RadioButton radioButtonCitizen = (RadioButton) findViewById(R.id.radioCitizen);
+        final RadioButton radioButtonCitizen = (RadioButton) findViewById(R.id.radioCitizen);
         final RadioButton radioButtonAuthority = (RadioButton) findViewById(R.id.radioAuthority);// initiate a radio button
 
 
@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
                     if(radioButtonAuthority.isChecked()) {
                         startActivity(new Intent(MainActivity.this, AuthorityHome.class));
                     }
-                    else
+                    else if(radioButtonCitizen.isChecked())
                     {
                         startActivity(new Intent(MainActivity.this, CitizenHomepage.class));
                     }
