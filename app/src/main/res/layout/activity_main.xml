@@ -23,13 +23,13 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="16dp"
                 android:layout_marginTop="50dp"
-                android:fontFamily="@font/poppins_medium"
+                android:fontFamily="@font/averia_gruesa_libre"
                 android:text="Adhiksh"
                 android:textAlignment="center"
                 android:textAllCaps="true"
                 android:textColor="@color/blue"
-                android:textSize="30sp"
-                android:textStyle="bold|italic" />
+                android:textSize="35sp"
+                android:textStyle="bold" />
 
             <RadioGroup
                 android:layout_width="match_parent"
