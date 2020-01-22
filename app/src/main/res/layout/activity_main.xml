@@ -34,12 +34,14 @@
             <RadioGroup
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:id="@+id/radioGroup"
                 android:gravity="center"
                 android:orientation="horizontal">
 
                 <com.google.android.material.radiobutton.MaterialRadioButton
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="wrap_content"
+                    android:id="@+id/radioCitizen"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10dp"
                     android:text="Citizen" />
@@ -47,6 +49,7 @@
                 <com.google.android.material.radiobutton.MaterialRadioButton
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="wrap_content"
+                    android:id="@+id/radioAuthority"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:text="Authority" />
