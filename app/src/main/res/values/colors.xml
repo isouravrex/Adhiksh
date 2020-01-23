@@ -6,4 +6,6 @@
     <color name="blue">#1565cf</color>
     <color name="white">#FFFFFF</color>
     <color name="black">#222222</color>
+    <color name="grey">#1565cf</color>
+
 </resources>

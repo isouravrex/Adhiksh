@@ -40,11 +40,12 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="8"
                     android:fontFamily="@font/poppins_medium"
-                    android:text="e-FIR " />
+                    android:text="Appointment " />
 
                 <ImageView
-                    android:layout_width="8dp"
-                    android:layout_height="8dp"
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:outlineSpotShadowColor="@color/blue"
                     android:background="@drawable/circle_shape"/>
                 <TextView
                     android:layout_width="wrap_content"
@@ -59,7 +60,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@color/black"
-                android:text="Burglary At Electronics Shop"
+                android:text="Permission For Peace Ralley"
                 android:fontFamily="@font/poppins_medium" />
 
             <LinearLayout
@@ -69,7 +70,7 @@
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:text="Locality : Piplani"
+                    android:text="Date : 10/02/2020"
                     android:layout_weight="1"
                     android:fontFamily="@font/poppins_medium"/>
                 <TextView
