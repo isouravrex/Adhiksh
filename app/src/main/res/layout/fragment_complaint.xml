@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".FragmentNoc">
+    tools:context=".ComplaintFragment">
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
@@ -42,7 +42,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/poppins_semibold"
-                            android:text="35"
+                            android:text="15"
                             android:textAlignment="center"
                             android:textColor="@color/black"
                             android:textSize="18sp" />
@@ -51,7 +51,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/poppins_semibold"
-                            android:text="NOC Requests"
+                            android:text="Complaints"
                             android:textAlignment="center"
                             android:textSize="18sp" />
                     </LinearLayout>
@@ -67,7 +67,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/poppins_semibold"
-                            android:text="18"
+                            android:text="8"
                             android:textAlignment="center"
                             android:textColor="@color/black"
                             android:textSize="18sp" />
@@ -116,15 +116,13 @@
             <!--                android:nestedScrollingEnabled="false"-->
             <!--                android:orientation="vertical"-->
             <!--                tools:listitem="@layout/card_home" />-->
-            <include layout="@layout/card_noc" />
-            <include layout="@layout/card_noc" />
-            <include layout="@layout/card_noc" />
-            <include layout="@layout/card_noc" />
-            <include layout="@layout/card_noc" />
-            <include layout="@layout/card_noc" />
-            <include layout="@layout/card_noc" />
-
-
+            <include layout="@layout/card_complaint" />
+            <include layout="@layout/card_complaint" />
+            <include layout="@layout/card_complaint" />
+            <include layout="@layout/card_complaint" />
+            <include layout="@layout/card_complaint" />
+            <include layout="@layout/card_complaint" />
+            <include layout="@layout/card_complaint" />
 
 
 

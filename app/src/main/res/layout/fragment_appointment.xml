@@ -14,7 +14,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#F6F6F6"
+        android:background="@color/grey"
         android:orientation="vertical">
 
     <androidx.cardview.widget.CardView
@@ -85,28 +85,43 @@
 
     </androidx.cardview.widget.CardView>
 
-    <!--            <androidx.recyclerview.widget.RecyclerView-->
-    <!--                android:layout_width="match_parent"-->
-    <!--                android:layout_height="wrap_content"-->
-    <!--                android:nestedScrollingEnabled="false"-->
-    <!--                android:orientation="vertical"-->
-    <!--                tools:listitem="@layout/card_home" />-->
-    <include layout="@layout/card_appointment" />
+        <LinearLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:padding="8dp"
+            android:gravity="center"
+            android:background="@drawable/borderblack"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.SearchView
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:queryHint="LAR No."
+                android:textAlignment="viewStart"
+                android:background="@color/white"
+                android:textDirection="ltr"
+                app:iconifiedByDefault="false">
+
+            </androidx.appcompat.widget.SearchView>
+
+
+        </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:id="@+id/appointment_recycler"
+                    android:layout_height="match_parent"
+                    android:nestedScrollingEnabled="false"
+                    android:orientation="vertical"
+                    android:scrollbars="vertical"
+                    tools:listitem="@layout/card_appointment" />
+
+
 
         <include layout="@layout/card_appointment" />
-        <include layout="@layout/card_appointment" />
-        <include layout="@layout/card_appointment" />
-        <include layout="@layout/card_appointment" />
-        <include layout="@layout/card_appointment" />
-        <include layout="@layout/card_appointment" />
-
-
-
-
-
-
-
-
 
     </LinearLayout>
     </androidx.core.widget.NestedScrollView>

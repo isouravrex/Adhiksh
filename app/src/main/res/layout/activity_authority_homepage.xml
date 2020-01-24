@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AuthorityHomepage">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:id="@+id/action_bar"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/grey"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/white"
+            android:padding="4dp"
+            android:src="@drawable/records"
+            android:tint="@color/white" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="8"
+            android:fontFamily="@font/poppins_medium"
+            android:text="Records"
+            android:textAlignment="textStart"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/fragment_container"
+        android:layout_above="@+id/bottomNavBar"
+        android:layout_below="@+id/action_bar">
+
+    </FrameLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:id="@+id/bottomNavBar"
+        android:layout_height="60dp"
+        android:layout_gravity="bottom"
+        android:layout_alignParentBottom="true"
+        android:background="#F9F9F9"
+        android:outlineSpotShadowColor="@color/black"
+        android:padding="8dp"
+        app:labelVisibilityMode="labeled"
+        app:menu="@menu/bottom_menu" />
+
+</RelativeLayout>

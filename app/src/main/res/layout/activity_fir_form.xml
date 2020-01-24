@@ -62,7 +62,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="16dp"
-                android:hint="Father's Name*">
+                android:hint="Father/Husband Name*">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/editFathersName"
@@ -97,6 +97,25 @@
                     android:fontFamily="@font/poppins"
                     android:text="Female" />
             </RadioGroup>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:hint="Age*">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editAge"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="0dp"
+                    android:ems="10"
+                    android:fontFamily="@font/poppins"
+                    android:inputType="number" />
+            </com.google.android.material.textfield.TextInputLayout>
+
 
             <com.google.android.material.textfield.TextInputLayout
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"

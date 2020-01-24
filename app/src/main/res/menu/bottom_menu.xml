@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:id="@+id/home_icon"
-        android:icon="@drawable/ic_home"
-        android:title="Home" />
+        android:id="@+id/fir_icon"
+        android:icon="@drawable/fir"
+        android:title="Registered FIR" />
+    <item
+        android:id="@+id/complaint_icon"
+        android:icon="@drawable/question"
+        android:title="Complaints" />
     <item
         android:id="@+id/appointment_icon"
-        android:icon="@drawable/ic_home"
+        android:icon="@drawable/appointment"
         android:title="Appointments" />
     <item
         android:id="@+id/noc_icon"
-        android:icon="@drawable/ic_home"
-        android:title="NOC" />
-    <item
-        android:id="@+id/nearby_icon"
-        android:icon="@drawable/ic_home"
-        android:title="Nearby" />
+        android:icon="@drawable/noc"
+        android:title="NOC Requests" />
 
 </menu>

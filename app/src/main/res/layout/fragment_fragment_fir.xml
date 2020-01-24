@@ -1,46 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".FragmentFir">
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1">
-
-
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="?attr/actionBarSize"
-                android:background="@color/grey"
-                android:gravity="center"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:backgroundTint="@color/white"
-                    android:padding="4dp"
-                    android:src="@drawable/ic_home"
-                    android:tint="@color/white" />
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="8"
-                    android:fontFamily="@font/poppins_medium"
-                    android:text="Records"
-                    android:textAlignment="textStart"
-                    android:textColor="@color/white"
-                    android:textSize="18sp" />
-
-
-            </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -121,6 +90,31 @@
 
                 </androidx.cardview.widget.CardView>
 
+                <LinearLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:padding="8dp"
+                    android:gravity="center"
+                    android:background="@drawable/borderblack"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.SearchView
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:queryHint="LAR No."
+                        android:textAlignment="viewStart"
+                        android:background="@color/white"
+                        android:textDirection="ltr"
+                        app:iconifiedByDefault="false">
+
+                    </androidx.appcompat.widget.SearchView>
+
+
+                </LinearLayout>
+
                 <!--            <androidx.recyclerview.widget.RecyclerView-->
                 <!--                android:layout_width="match_parent"-->
                 <!--                android:layout_height="wrap_content"-->
@@ -162,12 +156,4 @@
     </androidx.core.widget.NestedScrollView>
 
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_gravity="bottom"
-        android:background="#F9F9F9"
-        android:padding="8dp"
-        app:labelVisibilityMode="labeled"
-        app:menu="@menu/bottom_menu" />
-</LinearLayout>
+</FrameLayout>

@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     if(radioButtonAuthority.isChecked()) {
-                        startActivity(new Intent(MainActivity.this, AuthorityHome.class));
+                        startActivity(new Intent(MainActivity.this, AuthorityHomepage.class));
                     }
                     else if(radioButtonCitizen.isChecked())
                     {
