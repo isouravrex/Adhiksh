@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     if(radioButtonAuthority.isChecked()) {
-
+                        startActivity(new Intent(MainActivity.this, AuthorityHomepage.class));
                     }
                     else if(radioButtonCitizen.isChecked()) {
                         String email = emailEt.getText().toString();
@@ -91,8 +91,6 @@ public class MainActivity extends AppCompatActivity {
                             Toast.makeText(MainActivity.this, "Authentication failed.",
                                     Toast.LENGTH_SHORT).show();
                         }
-
-                        // ...
                     }
                 });
     }

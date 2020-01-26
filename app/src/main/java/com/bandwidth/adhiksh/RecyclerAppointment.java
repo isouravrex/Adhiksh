@@ -9,6 +9,10 @@ public class RecyclerAppointment {
     private String date,lar,status;
     private ArrayList<RecyclerAppointment> RecyclerAppointment =new ArrayList<>();
 
+    public RecyclerAppointment(String subject) {
+        this.subject = subject;
+    }
+
     public RecyclerAppointment() {
 
     }
