@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.ProgressBar;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
@@ -32,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
     TextView signUp;
     TextInputEditText emailEt, passwordEt;
     private FirebaseAuth mAuth;
+    ProgressBar progressBar;
 
     private static final String TAG = "MainActivity";
     @Override
@@ -41,6 +43,8 @@ public class MainActivity extends AppCompatActivity {
         setUIViews();
         final RadioButton radioButtonCitizen = (RadioButton) findViewById(R.id.radioCitizen);
         final RadioButton radioButtonAuthority = (RadioButton) findViewById(R.id.radioAuthority);// initiate a radio button
+
+        progressBar = findViewById(R.id.progress_bar);
 
         emailEt = findViewById(R.id.emailEt);
         passwordEt = findViewById(R.id.passwordEt);
@@ -55,7 +59,9 @@ public class MainActivity extends AppCompatActivity {
                     else if(radioButtonCitizen.isChecked()) {
                         String email = emailEt.getText().toString();
                         String password = passwordEt.getText().toString();
-                        login(email, password);
+
+                        if(!(email.isEmpty() || password.isEmpty()))
+                            login(email, password);
                     }
 
                 }
@@ -76,16 +82,20 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void login(String email, String password){
+        progressBar.setVisibility(View.VISIBLE);
         mAuth.signInWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
+                            progressBar.setVisibility(View.GONE);
                             // Sign in success, update UI with the signed-in user's information
                             Log.d(TAG, "signInWithEmail:success");
                             FirebaseUser user = mAuth.getCurrentUser();
                             startActivity(new Intent(MainActivity.this, CitizenHomepage.class));
+
                         } else {
+                            progressBar.setVisibility(View.GONE);
                             // If sign in fails, display a message to the user.
                             Log.w(TAG, "signInWithEmail:failure", task.getException());
                             Toast.makeText(MainActivity.this, "Authentication failed.",
