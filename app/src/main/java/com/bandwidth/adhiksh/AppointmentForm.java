@@ -35,11 +35,14 @@ public class AppointmentForm extends AppCompatActivity {
         setContentView(R.layout.activity_appointment_form);
         setUIViews();
 
+
         nameOfPesonal = findViewById(R.id.editTextAuthority);
         submit = findViewById(R.id.btn_submitAppointment);
         dateEt = findViewById(R.id.editDate);
 
         submit.setOnClickListener(new View.OnClickListener() {
+
+
             @Override
             public void onClick(View v) {
                 String personalName = nameOfPesonal.getText().toString();
@@ -48,9 +51,17 @@ public class AppointmentForm extends AppCompatActivity {
                 myRef.child("appointment").child(1+"").child("date").setValue(date);
                 //myRef.setValue("demo", personalName);
             }
+
         });
 
         getDataFromDB();
+
+        submit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(AppointmentForm.this, FormSubmission.class));
+            }
+        });
 
     }
 

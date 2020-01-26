@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/grey"
     android:orientation="vertical"
-    tools:context=".AppointmentDetails">
+    tools:context=".NocDetails">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -21,8 +21,8 @@
             android:layout_height="32dp"
             android:layout_weight="1"
             android:backgroundTint="@color/white"
-            android:padding="2dp"
-            android:src="@drawable/appointment"
+            android:padding="0dp"
+            android:src="@drawable/noc"
             android:tint="@color/white" />
 
         <TextView
@@ -30,7 +30,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="8"
             android:fontFamily="@font/poppins_medium"
-            android:text="Appointments"
+            android:text="NOC Requests"
             android:textAlignment="textStart"
             android:textColor="@color/white"
             android:textSize="20sp" />
@@ -64,15 +64,15 @@
                     android:layout_width="20dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:padding="3dp"
-                    android:src="@drawable/appointment" />
+                    android:padding="0dp"
+                    android:src="@drawable/noc" />
 
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="8"
                     android:fontFamily="@font/poppins_medium"
-                    android:text="Appointment " />
+                    android:text="NOC " />
 
                 <ImageView
                     android:layout_width="10dp"
@@ -89,11 +89,10 @@
             </LinearLayout>
 
             <TextView
-                android:id="@+id/subject_tv"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@color/black"
-                android:text="Permission For Peace Ralley"
+                android:text="Request NOC For A Loan"
                 android:fontFamily="@font/poppins_medium" />
 
             <LinearLayout
@@ -103,13 +102,13 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Authority :"
+                    android:text="Category :"
                     android:layout_weight="0"
                     android:fontFamily="@font/poppins_medium"/>
                 <TextView
-                    android:layout_width="0dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Inspector "
+                    android:text="Job"
                     android:textColor="@color/black"
                     android:layout_weight="1"
                     android:fontFamily="@font/poppins_medium"/>
@@ -153,7 +152,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/poppins_medium"
-                    android:text="Authority"
+                    android:text="NOC Details"
                     android:textAlignment="viewStart"
                     android:layout_marginBottom="4dp"
                     android:textColor="@color/blue"
@@ -167,76 +166,13 @@
                     <TextView
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:text="Authority "
+                        android:text="Category "
                         android:layout_weight="1"
                         android:fontFamily="@font/poppins_medium"/>
                     <TextView
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:text="Inspector"
-                        android:textColor="@color/black"
-                        android:layout_weight="1"
-                        android:fontFamily="@font/poppins_medium" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:text="Personnel Name"
-                        android:layout_weight="1"
-                        android:fontFamily="@font/poppins_medium"/>
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:text="Mr.Ashok Kumar"
-                        android:textColor="@color/black"
-                        android:layout_weight="1"
-                        android:fontFamily="@font/poppins_medium" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:text="Date"
-                        android:layout_weight="1"
-                        android:fontFamily="@font/poppins_medium"/>
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:text="26/01/2020"
-                        android:textColor="@color/black"
-                        android:layout_weight="1"
-                        android:fontFamily="@font/poppins_medium" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:text="Time"
-                        android:layout_weight="1"
-                        android:fontFamily="@font/poppins_medium"/>
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:text="23:00"
+                        android:text="Job"
                         android:textColor="@color/black"
                         android:layout_weight="1"
                         android:fontFamily="@font/poppins_medium" />
@@ -244,18 +180,6 @@
                 </LinearLayout>
 
 
-
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/poppins_medium"
-                    android:text="Person Details"
-                    android:textAlignment="viewStart"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginBottom="4dp"
-                    android:textColor="@color/blue"
-                    android:textSize="15sp" />
 
 
                 <LinearLayout
@@ -278,6 +202,28 @@
                         android:fontFamily="@font/poppins_medium" />
 
                 </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Father/Husband Name"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/poppins_medium"/>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Mr.Ashok Kumar"
+                        android:textColor="@color/black"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/poppins_medium" />
+
+                </LinearLayout>
+
 
 
                 <LinearLayout
@@ -403,7 +349,7 @@
                     <TextView
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:text="To Hold A Peace Ralley"
+                        android:text="Provide NOC To Join Job"
                         android:textColor="@color/black"
                         android:layout_weight="1"
                         android:fontFamily="@font/poppins_medium" />
@@ -453,7 +399,7 @@
                 </LinearLayout>
 
                 <com.google.android.material.button.MaterialButton
-                    android:id="@+id/btn_appoint_sub"
+                    android:id="@+id/btn_noc_sub"
                     style="@style/Widget.MaterialComponents.Button"
                     android:layout_width="match_parent"
                     android:layout_height="75dp"

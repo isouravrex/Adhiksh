@@ -10,9 +10,9 @@
     </string-array>
 
     <string-array name="approval_arrays">
+        <item>Pending</item>
         <item>Approve</item>
         <item>Reject</item>
-        <item>Pending</item>
     </string-array>
 
     <!-- TODO: Remove or change this placeholder text -->

@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".AppointmentDetails"></activity>
+        <activity android:name=".ComplaintDetails"></activity>
+        <activity android:name=".NocDetails" />
+        <activity android:name=".AppointmentDetails" />
         <activity android:name=".FirDetails" />
         <activity android:name=".AuthorityHomepage" />
         <activity android:name=".FormSubmission" />
@@ -20,9 +22,7 @@
         <activity android:name=".FirForm2" />
         <activity android:name=".FirForm" />
         <activity android:name=".ComplaintForm" />
-        <activity android:name=".AppointmentForm" >
-
-        </activity>
+        <activity android:name=".AppointmentForm" />
         <activity android:name=".NOCForm" />
         <activity android:name=".SignUp" />
         <activity
@@ -33,7 +33,6 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
 
         <meta-data
