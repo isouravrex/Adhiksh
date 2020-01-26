@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "596106759583",
+    "firebase_url": "https://adhiksh-3d334.firebaseio.com",
+    "project_id": "adhiksh-3d334",
+    "storage_bucket": "adhiksh-3d334.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:596106759583:android:fb02f43b421811f9ab41aa",
+        "android_client_info": {
+          "package_name": "com.bandwidth.adhiksh"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "596106759583-n4d8e6k6da0bmi4kb8n4uiatrcpfla26.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.bandwidth.adhiksh",
+            "certificate_hash": "a8ddea9a181326a99566131fd84182bfe1009b40"
+          }
+        },
+        {
+          "client_id": "596106759583-65kp4lv5e3nibuq9he23purmslalflcb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAqtT0jp6SZL6ccz10UMvNMxB2CRQbS9Hw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "596106759583-65kp4lv5e3nibuq9he23purmslalflcb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

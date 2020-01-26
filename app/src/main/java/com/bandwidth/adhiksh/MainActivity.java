@@ -1,24 +1,39 @@
 package com.bandwidth.adhiksh;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.android.material.button.MaterialButton;
+import com.google.android.material.textfield.TextInputEditText;
+import com.google.android.material.textfield.TextInputLayout;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RadioButton;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
     MaterialButton login;
     TextView signUp;
+    TextInputEditText emailEt, passwordEt;
+    private FirebaseAuth mAuth;
+
+    private static final String TAG = "MainActivity";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,22 +42,24 @@ public class MainActivity extends AppCompatActivity {
         final RadioButton radioButtonCitizen = (RadioButton) findViewById(R.id.radioCitizen);
         final RadioButton radioButtonAuthority = (RadioButton) findViewById(R.id.radioAuthority);// initiate a radio button
 
+        emailEt = findViewById(R.id.emailEt);
+        passwordEt = findViewById(R.id.passwordEt);
+        mAuth = FirebaseAuth.getInstance();
 
             login.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     if(radioButtonAuthority.isChecked()) {
-                        startActivity(new Intent(MainActivity.this, AuthorityHomepage.class));
+
                     }
-                    else if(radioButtonCitizen.isChecked())
-                    {
-                        startActivity(new Intent(MainActivity.this, CitizenHomepage.class));
+                    else if(radioButtonCitizen.isChecked()) {
+                        String email = emailEt.getText().toString();
+                        String password = passwordEt.getText().toString();
+                        login(email, password);
                     }
 
                 }
             });
-
-
 
 
         signUp.setOnClickListener(new View.OnClickListener() {
@@ -56,6 +73,28 @@ public class MainActivity extends AppCompatActivity {
     private void setUIViews(){
         login = findViewById(R.id.btn_login);
         signUp = findViewById(R.id.tv_signup);
+    }
+
+    private void login(String email, String password){
+        mAuth.signInWithEmailAndPassword(email, password)
+                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        if (task.isSuccessful()) {
+                            // Sign in success, update UI with the signed-in user's information
+                            Log.d(TAG, "signInWithEmail:success");
+                            FirebaseUser user = mAuth.getCurrentUser();
+                            startActivity(new Intent(MainActivity.this, CitizenHomepage.class));
+                        } else {
+                            // If sign in fails, display a message to the user.
+                            Log.w(TAG, "signInWithEmail:failure", task.getException());
+                            Toast.makeText(MainActivity.this, "Authentication failed.",
+                                    Toast.LENGTH_SHORT).show();
+                        }
+
+                        // ...
+                    }
+                });
     }
 
 }

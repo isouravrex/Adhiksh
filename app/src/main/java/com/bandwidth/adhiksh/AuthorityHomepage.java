@@ -20,14 +20,15 @@ public class AuthorityHomepage extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_authority_homepage);
+
         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                 new FragmentFir()).commit();
 
         navigation = (BottomNavigationView) findViewById(R.id.bottomNavBar);
         navigation.setOnNavigationItemSelectedListener(navlistner);
 
-
     }
+
 
 
     private BottomNavigationView.OnNavigationItemSelectedListener navlistner

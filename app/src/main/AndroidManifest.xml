@@ -2,7 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.bandwidth.adhiksh">
 
-
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -10,11 +9,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
-        <activity android:name=".AuthorityHomepage"></activity>
+        <activity android:name=".AppointmentDetails"></activity>
+        <activity android:name=".FirDetails" />
+        <activity android:name=".AuthorityHomepage" />
         <activity android:name=".FormSubmission" />
-        <activity android:name=".CitizenHomepage"
-            android:windowSoftInputMode="stateHidden"/>
+        <activity
+            android:name=".CitizenHomepage"
+            android:windowSoftInputMode="stateHidden" />
         <activity android:name=".AuthorityHome" />
         <activity android:name=".FirForm2" />
         <activity android:name=".FirForm" />
@@ -22,15 +23,14 @@
         <activity android:name=".AppointmentForm" />
         <activity android:name=".NOCForm" />
         <activity android:name=".SignUp" />
-        <activity android:name=".MainActivity"
+        <activity
+            android:name=".MainActivity"
             android:windowSoftInputMode="stateHidden">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
 
         <meta-data

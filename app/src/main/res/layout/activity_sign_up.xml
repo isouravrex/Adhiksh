@@ -76,6 +76,7 @@
                 android:hint="Email ID*">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/emailEt"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/poppins"
@@ -124,6 +125,7 @@
                 android:hint="Password*">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/passwordEt"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/poppins"
@@ -148,7 +150,7 @@
 
 
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/btn_login"
+                android:id="@+id/btn_signup"
                 style="@style/Widget.MaterialComponents.Button"
                 android:layout_width="match_parent"
                 android:layout_height="75dp"
