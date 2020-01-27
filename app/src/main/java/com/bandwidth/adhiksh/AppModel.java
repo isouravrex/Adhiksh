@@ -2,18 +2,18 @@ package com.bandwidth.adhiksh;
 
 import java.util.ArrayList;
 
-public class RecyclerAppointment {
+public class AppModel {
 
     //POJO class consists of get method and set method
     private String subject;
     private String date,lar,status;
-    private ArrayList<RecyclerAppointment> RecyclerAppointment =new ArrayList<>();
+    private ArrayList<AppModel> AppModel =new ArrayList<>();
 
-    public RecyclerAppointment(String subject) {
+    public AppModel(String subject) {
         this.subject = subject;
     }
 
-    public RecyclerAppointment() {
+    public AppModel() {
 
     }
     //getting content value

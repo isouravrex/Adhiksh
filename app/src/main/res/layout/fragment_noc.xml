@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".FragmentNoc">
 
     <androidx.core.widget.NestedScrollView
@@ -23,7 +23,6 @@
                 android:layout_margin="16dp"
                 android:elevation="10dp"
                 app:cardCornerRadius="25dp">
-
 
 
                 <LinearLayout
@@ -90,18 +89,17 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="16dp"
-                android:padding="8dp"
-                android:gravity="center"
                 android:background="@drawable/borderblack"
-                android:orientation="vertical">
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="8dp">
 
                 <androidx.appcompat.widget.SearchView
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:queryHint="LAR No."
-                    android:textAlignment="viewStart"
                     android:background="@color/white"
+                    android:textAlignment="viewStart"
                     android:textDirection="ltr"
                     app:iconifiedByDefault="false">
 
@@ -110,29 +108,27 @@
 
             </LinearLayout>
 
-            <!--            <androidx.recyclerview.widget.RecyclerView-->
-            <!--                android:layout_width="match_parent"-->
-            <!--                android:layout_height="wrap_content"-->
-            <!--                android:nestedScrollingEnabled="false"-->
-            <!--                android:orientation="vertical"-->
-            <!--                tools:listitem="@layout/card_home" />-->
-            <include layout="@layout/card_noc" />
-            <include layout="@layout/card_noc" />
-            <include layout="@layout/card_noc" />
-            <include layout="@layout/card_noc" />
-            <include layout="@layout/card_noc" />
-            <include layout="@layout/card_noc" />
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_noc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false"
+                android:orientation="vertical"
+                tools:listitem="@layout/card_home" />
+
             <include layout="@layout/card_noc" />
 
+            <include layout="@layout/card_noc" />
 
+            <include layout="@layout/card_noc" />
 
+            <include layout="@layout/card_noc" />
 
+            <include layout="@layout/card_noc" />
 
+            <include layout="@layout/card_noc" />
 
-
-
-
-
+            <include layout="@layout/card_noc" />
 
 
         </LinearLayout>

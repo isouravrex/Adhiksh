@@ -1,7 +1,6 @@
 package com.bandwidth.adhiksh;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
@@ -9,8 +8,8 @@ import androidx.fragment.app.FragmentTransaction;
 import android.os.Bundle;
 import android.view.MenuItem;
 
-import com.google.android.material.bottomnavigation.BottomNavigationItemView;
-import com.google.android.material.bottomnavigation.BottomNavigationMenu;
+import com.bandwidth.adhiksh.Fragments.AppointmentFragment;
+import com.bandwidth.adhiksh.Fragments.ComplaintFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class AuthorityHomepage extends AppCompatActivity {
@@ -21,15 +20,14 @@ public class AuthorityHomepage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_authority_homepage);
 
-        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                new FragmentFir()).commit();
+//        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+//                new FragmentFir()).commit();
 
         navigation = (BottomNavigationView) findViewById(R.id.bottomNavBar);
         navigation.setOnNavigationItemSelectedListener(navlistner);
+        navigation.setSelectedItemId(R.id.fir_icon);
 
     }
-
-
 
     private BottomNavigationView.OnNavigationItemSelectedListener navlistner
             = new BottomNavigationView.OnNavigationItemSelectedListener() {

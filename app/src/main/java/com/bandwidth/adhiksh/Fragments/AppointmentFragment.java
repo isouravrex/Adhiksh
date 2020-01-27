@@ -1,4 +1,4 @@
-package com.bandwidth.adhiksh;
+package com.bandwidth.adhiksh.Fragments;
 
 
 import android.os.Bundle;
@@ -12,6 +12,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.bandwidth.adhiksh.AppointmentAdapter;
+import com.bandwidth.adhiksh.R;
+import com.bandwidth.adhiksh.AppModel;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -28,7 +31,7 @@ import java.util.List;
 public class AppointmentFragment extends Fragment {
 
     RecyclerView recyclerView;
-    List<RecyclerAppointment> list;
+    List<AppModel> list;
     AppointmentAdapter adapter;
 
     FirebaseDatabase database = FirebaseDatabase.getInstance();
@@ -69,8 +72,8 @@ public class AppointmentFragment extends Fragment {
                 for (DataSnapshot demo: temp.getChildren()) {
                     String name = demo
                             .child("Personnel Name").getValue().toString();
-                    RecyclerAppointment recyclerAppointment = new RecyclerAppointment(name);
-                    list.add(recyclerAppointment);
+                    AppModel appModel = new AppModel(name);
+                    list.add(appModel);
                 }
                 adapter.notifyDataSetChanged();
             }

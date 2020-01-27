@@ -1,4 +1,4 @@
-package com.bandwidth.adhiksh;
+package com.bandwidth.adhiksh.Fragments;
 
 
 import android.os.Bundle;
@@ -11,6 +11,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.bandwidth.adhiksh.AppModel;
+import com.bandwidth.adhiksh.ComplaintAdapter;
+import com.bandwidth.adhiksh.FirAdapter;
+import com.bandwidth.adhiksh.R;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -18,14 +23,14 @@ import java.util.List;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class FragmentNoc extends Fragment {
+public class ComplaintFragment extends Fragment {
 
     RecyclerView recyclerView;
     List<AppModel> list;
-    NocAdapter adapter;
+    ComplaintAdapter adapter;
 
 
-    public FragmentNoc() {
+    public ComplaintFragment() {
         // Required empty public constructor
     }
 
@@ -34,9 +39,10 @@ public class FragmentNoc extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view= inflater.inflate(R.layout.fragment_noc, container, false);
+        View view= inflater.inflate(R.layout.fragment_complaint, container, false);
+
         list = new ArrayList<>();
-        for (int i=0;i<10;i++){
+        for(int i=0;i<10;i++){
             AppModel model = new AppModel();
 //            model.setDate("11-12-19");
 //            model.setLar("123456789");
@@ -44,12 +50,13 @@ public class FragmentNoc extends Fragment {
             model.setSubject("Burglary");
             list.add(model);
         }
-        recyclerView = view.findViewById(R.id.rv_noc);
+        recyclerView = view.findViewById(R.id.rv_compaint);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity(), RecyclerView.VERTICAL, false));
-        adapter = new NocAdapter(getActivity(), list);
+        adapter = new ComplaintAdapter(getActivity(), list);
         recyclerView.setAdapter(adapter);
 
         return view;
+
     }
 
 }

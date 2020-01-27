@@ -18,13 +18,11 @@
         </activity>
         <activity android:name=".ComplaintDetails" />
         <activity android:name=".NocDetails" />
-        <activity android:name=".AppointmentDetails" />
+        <activity android:name=".Activities.AppointmentDetails" />
         <activity android:name=".FirDetails" />
-        <activity android:name=".AuthorityHomepage" />
+        <activity android:name=".AuthorityHomepage" android:windowSoftInputMode="adjustPan" />
         <activity android:name=".FormSubmission" />
-        <activity
-            android:name=".CitizenHomepage"
-            android:windowSoftInputMode="stateHidden" />
+        <activity android:name=".CitizenHomepage" />
         <activity android:name=".AuthorityHome" />
         <activity android:name=".FirForm2" />
         <activity android:name=".FirForm" />
@@ -32,9 +30,7 @@
         <activity android:name=".AppointmentForm" />
         <activity android:name=".NOCForm" />
         <activity android:name=".SignUp" />
-        <activity
-            android:name=".MainActivity"
-            android:windowSoftInputMode="stateHidden">
+        <activity android:name=".MainActivity">
 
         </activity>
 

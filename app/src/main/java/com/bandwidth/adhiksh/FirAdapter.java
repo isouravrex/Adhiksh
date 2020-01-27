@@ -14,57 +14,51 @@ import com.bandwidth.adhiksh.Activities.AppointmentDetails;
 
 import java.util.List;
 
-public class AppointmentAdapter extends RecyclerView.Adapter<AppointmentAdapter.ViewHolder> {
+public class FirAdapter extends RecyclerView.Adapter<FirAdapter.FirViewHolder> {
 
     private Context mContext;
-    List<AppModel> list;
+    private List<AppModel> list;
 
-    public AppointmentAdapter(Context mContext, List<AppModel> list) {
+    public FirAdapter(Context mContext, List<AppModel> list) {
         this.mContext = mContext;
         this.list = list;
     }
 
-    @NonNull
     @Override
-    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(mContext).inflate(R.layout.card_appointment, parent, false);
-        return new ViewHolder(view);
-    }
+    public FirViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View view = LayoutInflater.from(mContext).inflate(R.layout.card_home, parent, false);
+        return new FirAdapter.FirViewHolder(view);    }
 
     @Override
-    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-
+    public void onBindViewHolder(@NonNull FirViewHolder holder, int position) {
         AppModel demo = list.get(position);
 
         holder.subject.setText(demo.getSubject());
-        holder.date.setText(demo.getDate());
 
     }
 
     @Override
     public int getItemCount() {
-        return list.size();
+        return 7;
     }
 
 
-    public class ViewHolder extends RecyclerView.ViewHolder{
+    public class FirViewHolder extends RecyclerView.ViewHolder{
 
-        TextView subject,date;
+        TextView subject;
 
-        public ViewHolder(@NonNull final View itemView) {
+        public FirViewHolder(@NonNull View itemView) {
             super(itemView);
-            date=itemView.findViewById(R.id.datetv);
-
-            subject = itemView.findViewById(R.id.subjectTv);
-
+            subject=itemView.findViewById(R.id.dogi);
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Intent intent = new Intent(mContext, AppointmentDetails.class);
+                    Intent intent = new Intent(mContext, FirDetails.class);
                     intent.putExtra("subject", list.get(getAdapterPosition()).getSubject());
                     mContext.startActivity(intent);
                 }
             });
+
         }
     }
 }

@@ -35,11 +35,6 @@ public class AppointmentForm extends AppCompatActivity {
         setContentView(R.layout.activity_appointment_form);
         setUIViews();
 
-
-        nameOfPesonal = findViewById(R.id.editTextAuthority);
-        submit = findViewById(R.id.btn_submitAppointment);
-        dateEt = findViewById(R.id.editDate);
-
         submit.setOnClickListener(new View.OnClickListener() {
 
 
@@ -64,6 +59,9 @@ public class AppointmentForm extends AppCompatActivity {
     private void setUIViews(){
 
         submit = findViewById(R.id.btn_submitAppointment);
+        nameOfPesonal = findViewById(R.id.editTextAuthority);
+        submit = findViewById(R.id.btn_submitAppointment);
+        dateEt = findViewById(R.id.editDate);
     }
 
 
@@ -78,8 +76,7 @@ public class AppointmentForm extends AppCompatActivity {
 
                 for (DataSnapshot demo: temp.getChildren()) {
 
-                    String name = demo
-                            .child("Personnel Name").getValue().toString();
+                    String name = demo.child("Personnel Name").getValue().toString();
                     Log.d(TAG, "onDataChange: " + name);
                 }
             }
