@@ -49,6 +49,8 @@ public class AppointmentForm extends AppCompatActivity {
                 String date = dateEt.getText().toString();
                 myRef.child("appointment").child(1+"").child("Personnel Name").setValue(personalName);
                 myRef.child("appointment").child(1+"").child("date").setValue(date);
+                startActivity(new Intent(AppointmentForm.this,FormSubmission.class));
+
                 //myRef.setValue("demo", personalName);
             }
 
@@ -56,12 +58,6 @@ public class AppointmentForm extends AppCompatActivity {
 
         getDataFromDB();
 
-        submit.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(AppointmentForm.this, FormSubmission.class));
-            }
-        });
 
     }
 
