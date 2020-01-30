@@ -5,12 +5,21 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.LinearLayout;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.google.android.material.button.MaterialButton;
+import com.google.android.material.textfield.TextInputEditText;
+import com.google.android.material.textfield.TextInputLayout;
+
+import static com.bandwidth.adhiksh.MainActivity.b;
 
 public class FirDetails extends AppCompatActivity {
     MaterialButton back;
+//    TextInputEditText remarkss;
+    TextInputLayout remarks;
+    LinearLayout selectc,statuss;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,6 +27,16 @@ public class FirDetails extends AppCompatActivity {
         setContentView(R.layout.activity_fir_details);
 
         setUIViews();
+
+        if(b==true)
+        {
+            back.setVisibility(View.INVISIBLE);
+            remarks.setVisibility(View.INVISIBLE);
+            selectc.setVisibility(View.INVISIBLE);
+        }
+        else {
+            statuss.setVisibility(View.INVISIBLE);
+        }
 
         back.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -33,6 +52,9 @@ public class FirDetails extends AppCompatActivity {
     private void setUIViews(){
 
         back = findViewById(R.id.btn_fir_sub);
+        remarks= findViewById(R.id.remarkss);
+        selectc= findViewById(R.id.select);
+        statuss= findViewById(R.id.status);
     }
 }
 

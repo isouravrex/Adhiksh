@@ -26,7 +26,10 @@ public class FormSubmission extends AppCompatActivity {
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(FormSubmission.this, CitizenHomepage.class));
+
+                Intent intent = new Intent(FormSubmission.this, CitizenHomepage.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                startActivity(intent);
             }
         });
 

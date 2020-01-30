@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
     TextInputEditText emailEt, passwordEt;
     private FirebaseAuth mAuth;
     ProgressBar progressBar;
-    public static boolean b;
+    public static boolean b=true;
 
     private static final String TAG = "MainActivity";
     @Override
@@ -56,8 +56,10 @@ public class MainActivity extends AppCompatActivity {
                 public void onClick(View v) {
                     if(radioButtonAuthority.isChecked()) {
                         startActivity(new Intent(MainActivity.this, AuthorityHomepage.class));
+                        b = false;
                     }
                     else if(radioButtonCitizen.isChecked()) {
+                        b=true;
                         String email = emailEt.getText().toString();
                         String password = passwordEt.getText().toString();
 

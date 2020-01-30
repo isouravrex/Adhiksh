@@ -549,12 +549,13 @@
             <com.google.android.material.textfield.TextInputLayout
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
+                android:id="@+id/remarkss"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
                 android:hint="Remarks">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/editDescription"
+                    android:id="@+id/remarks"
                     android:layout_width="match_parent"
                     android:layout_height="78dp"
                     android:ems="10"
@@ -563,10 +564,33 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/status"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Status"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/poppins_medium"
+                    android:textColor="@color/grey"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Approved"
+                    android:textColor="@color/black"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/poppins_medium" />
+
+            </LinearLayout>
+            <LinearLayout
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:layout_margin="8dp"
+                android:id="@+id/select"
                 android:padding="8dp"
                 android:gravity="center"
                 android:background="@drawable/border"

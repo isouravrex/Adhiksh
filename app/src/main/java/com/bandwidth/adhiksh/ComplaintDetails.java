@@ -7,10 +7,13 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.material.button.MaterialButton;
+import com.google.android.material.textfield.TextInputEditText;
+import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -19,9 +22,13 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.List;
 
+import static com.bandwidth.adhiksh.MainActivity.b;
+
 public class ComplaintDetails extends AppCompatActivity {
 
      MaterialButton back;
+    TextInputLayout remarks;
+    LinearLayout selectc,statuss;
 
     FirebaseDatabase database = FirebaseDatabase.getInstance();
 
@@ -37,6 +44,15 @@ public class ComplaintDetails extends AppCompatActivity {
 
         setDatabase();
         setUIViews();
+        if(b==true)
+        {
+            back.setVisibility(View.INVISIBLE);
+            remarks.setVisibility(View.INVISIBLE);
+            selectc.setVisibility(View.INVISIBLE);
+        }
+        else {
+            statuss.setVisibility(View.INVISIBLE);
+        }
 
 
         back.setOnClickListener(new View.OnClickListener() {
@@ -119,6 +135,9 @@ public class ComplaintDetails extends AppCompatActivity {
                 localitye=findViewById(R.id.locality);
                 dese=findViewById(R.id.des);
                 sole=findViewById(R.id.sugg);
+        remarks= findViewById(R.id.remarkss);
+        selectc= findViewById(R.id.select);
+        statuss= findViewById(R.id.status);
 
 
     }

@@ -1,26 +1,36 @@
 package com.bandwidth.adhiksh;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.Gravity;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
-public class CitizenHomepage extends AppCompatActivity {
+import com.bandwidth.adhiksh.Fragments.AppointmentFragment;
+import com.bandwidth.adhiksh.Fragments.ComplaintFragment;
+import com.google.android.material.navigation.NavigationView;
+import com.valdesekamdem.library.mdtoast.MDToast;
 
-    LinearLayout registerFIR,requestNOC,registerComplaint,requestAppointment;
+public class CitizenHomepage extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+
+    LinearLayout registerFIR, requestNOC, registerComplaint, requestAppointment;
     ActionBarDrawerToggle toggle;
     DrawerLayout drawer;
     ImageView icon;
     Toolbar toolbar;
-
+    NavigationView navigationView;
+    //    View logout;
+    MenuItem item;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,12 +38,13 @@ public class CitizenHomepage extends AppCompatActivity {
         setContentView(R.layout.activity_citizen_homepage);
         setUIViews();
 
-        drawer=findViewById(R.id.drawer_layout);
-        toolbar=findViewById(R.id.toolbar);
+//        loadFragment(CitizenHomeFragment);
 
-        toggle = new ActionBarDrawerToggle(CitizenHomepage.this,drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+        navigationView.setNavigationItemSelectedListener(this);
+        toggle = new ActionBarDrawerToggle(CitizenHomepage.this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
         drawer.closeDrawers();
+
 
         icon.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -42,45 +53,63 @@ public class CitizenHomepage extends AppCompatActivity {
             }
         });
 
+        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        
+        navigationView.setCheckedItem(R.id.home_icon);
 
 
+//        registerFIR.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                startActivity(new Intent(CitizenHomepage.this, FirForm.class));
+//            }
+//        });
+//
+//        registerComplaint.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                startActivity(new Intent(CitizenHomepage.this, ComplaintForm.class));
+//            }
+//        });
+//
+//        requestAppointment.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                startActivity(new Intent(CitizenHomepage.this, AppointmentForm.class));
+//            }
+//        });
+//
+//        requestNOC.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                startActivity(new Intent(CitizenHomepage.this, NOCForm.class));
+//            }
+//        });
 
-        registerFIR.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(CitizenHomepage.this, FirForm.class));
-            }
-        });
+//        logout.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//               finish();
+//            }
+//        });
+//        switch (item.getItemId()) {
+//            case logout:
+//                finish();
+//                break;
 
-        registerComplaint.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(CitizenHomepage.this, ComplaintForm.class));
-            }
-        });
-
-        requestAppointment.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(CitizenHomepage.this, AppointmentForm.class));
-            }
-        });
-
-        requestNOC.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(CitizenHomepage.this, NOCForm.class));
-            }
-        });
     }
 
-    private void setUIViews(){
+    private void setUIViews() {
         registerFIR = findViewById(R.id.registerFIR);
         registerComplaint = findViewById(R.id.registerComplaint);
         requestNOC = findViewById(R.id.requestNOC);
         requestAppointment = findViewById(R.id.requestAppointment);
         icon = findViewById(R.id.btn_drawer);
+        navigationView = findViewById(R.id.nav_view);
+        drawer = findViewById(R.id.drawer_layout);
+        toolbar = findViewById(R.id.toolbar);
     }
+
     @Override
     public void onBackPressed() {
         if (drawer.isDrawerOpen(Gravity.LEFT))
@@ -89,7 +118,70 @@ public class CitizenHomepage extends AppCompatActivity {
             super.onBackPressed();
     }
 
+    @Override
+    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
 
+        Fragment selectedFragment = null;
+        // Handle navigation view item clicks here.
+        switch (item.getItemId()) {
+
+            case R.id.logout: {
+                //do somthing
+                MDToast mdToast = MDToast.makeText(CitizenHomepage.this, "Log out successful", 1000, 1);
+                mdToast.show();
+                finish();
+                break;
+            }
+            case R.id.fir_icon:{
+
+                selectedFragment = new FragmentFir();
+                loadFragment(selectedFragment);
+                break;
+            }
+
+            case R.id.noc_icon:{
+
+                selectedFragment = new FragmentNoc();
+                loadFragment(selectedFragment);
+                break;
+            }
+
+            case R.id.appointment_icon:{
+
+                selectedFragment = new AppointmentFragment();
+                loadFragment(selectedFragment);
+                break;
+            }
+
+            case R.id.complaint_icon:{
+
+                selectedFragment = new ComplaintFragment();
+                loadFragment(selectedFragment);
+                break;
+            }
+
+            case R.id.home_icon:{
+
+                selectedFragment = new CitizenHomeFragment();
+                loadFragment(selectedFragment);
+                break;
+            }
+
+
+        }
+
+        //close navigation drawer
+        drawer.closeDrawer(GravityCompat.START);
+        return true;
+    }
+
+    private void loadFragment(Fragment selectedFragment) {
+
+        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+        transaction.replace(R.id.fragment_containerr,selectedFragment);
+        transaction.addToBackStack(null).commit();
+//        transaction.commit();
+    }
 
 
 }

@@ -12,9 +12,11 @@
 
 
     <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
         android:layout_width="250dp"
         android:layout_height="match_parent"
-        app:menu="@menu/bottom_menu"
+        app:headerLayout="@layout/header"
+        app:menu="@menu/citizen_menu"
         android:layout_gravity="start"
         android:fitsSystemWindows="false"
         />
