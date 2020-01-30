@@ -12,47 +12,55 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
-public class ComplaintAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
+public class ComplaintAdapter extends RecyclerView.Adapter<ComplaintAdapter.ViewHolder> {
 
     private Context mContext;
-    private List<AppModel> list;
+    private List<Model> list;
 
-    public ComplaintAdapter(Context mContext, List<AppModel> list) {
+
+    public ComplaintAdapter(Context mContext, List<Model> list) {
         this.mContext = mContext;
         this.list = list;
     }
 
     @NonNull
     @Override
-    public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(mContext).inflate(R.layout.card_complaint, parent, false);
         return new ComplaintAdapter.ViewHolder(view);      }
 
     @Override
-    public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
-        AppModel demo = list.get(position);
+    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+        Model complaint = list.get(position);
 
-//        holder.subject.setText(demo.getSubject());
+        holder.subj.setText(complaint.getSubject());
+        holder.locality.setText(complaint.getLocality());
+
     }
 
     @Override
     public int getItemCount() {
-        return 10;
+        return list.size();
     }
 
 
     public class ViewHolder extends RecyclerView.ViewHolder {
 
-        TextView subject;
+        TextView subj,locality;
+
+
+
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            subject = itemView.findViewById(R.id.dogi);
+            subj = itemView.findViewById(R.id.subj);
+            locality=itemView.findViewById(R.id.locality);
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     Intent intent = new Intent(mContext, ComplaintDetails.class);
                     intent.putExtra("subject", list.get(getAdapterPosition()).getSubject());
+                    intent.putExtra("locality",list.toArray());
                     mContext.startActivity(intent);
                 }
             });

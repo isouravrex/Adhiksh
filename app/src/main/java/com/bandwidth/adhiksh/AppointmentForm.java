@@ -42,8 +42,9 @@ public class AppointmentForm extends AppCompatActivity {
             public void onClick(View v) {
                 String personalName = nameOfPesonal.getText().toString();
                 String date = dateEt.getText().toString();
-                myRef.child("appointment").child(1+"").child("Personnel Name").setValue(personalName);
-                myRef.child("appointment").child(1+"").child("date").setValue(date);
+                String id= myRef.push().getKey();
+                myRef.child("appointment").child(id).child("Personnel Name").setValue(personalName);
+                myRef.child("appointment").child(id).child("date").setValue(date);
                 startActivity(new Intent(AppointmentForm.this,FormSubmission.class));
 
                 //myRef.setValue("demo", personalName);

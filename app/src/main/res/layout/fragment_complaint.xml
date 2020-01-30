@@ -118,13 +118,13 @@
                             android:orientation="vertical"
                             tools:listitem="@layout/card_home" />
 
-            <include layout="@layout/card_complaint" />
-            <include layout="@layout/card_complaint" />
-            <include layout="@layout/card_complaint" />
-            <include layout="@layout/card_complaint" />
-            <include layout="@layout/card_complaint" />
-            <include layout="@layout/card_complaint" />
-            <include layout="@layout/card_complaint" />
+<!--            <include layout="@layout/card_complaint" />-->
+<!--            <include layout="@layout/card_complaint" />-->
+<!--            <include layout="@layout/card_complaint" />-->
+<!--            <include layout="@layout/card_complaint" />-->
+<!--            <include layout="@layout/card_complaint" />-->
+<!--            <include layout="@layout/card_complaint" />-->
+<!--            <include layout="@layout/card_complaint" />-->
 
 
 
