@@ -21,7 +21,7 @@ public class FirForm extends AppCompatActivity {
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(FirForm.this, FirForm2.class));
+                startActivity(new Intent(FirForm.this, FormSubmission.class));
             }
         });
 
@@ -29,6 +29,6 @@ public class FirForm extends AppCompatActivity {
 
     private void setUIViews(){
 
-        submit = findViewById(R.id.btn_continue);
+        submit = findViewById(R.id.btn_submitFir);
     }
 }

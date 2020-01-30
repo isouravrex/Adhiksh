@@ -34,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
     TextInputEditText emailEt, passwordEt;
     private FirebaseAuth mAuth;
     ProgressBar progressBar;
+    public static boolean b;
 
     private static final String TAG = "MainActivity";
     @Override

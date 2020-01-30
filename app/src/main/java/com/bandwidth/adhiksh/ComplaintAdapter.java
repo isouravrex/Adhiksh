@@ -47,6 +47,7 @@ public class ComplaintAdapter extends RecyclerView.Adapter<ComplaintAdapter.View
     public class ViewHolder extends RecyclerView.ViewHolder {
 
         TextView subj,locality;
+        String id;
 
 
 
@@ -55,12 +56,14 @@ public class ComplaintAdapter extends RecyclerView.Adapter<ComplaintAdapter.View
             super(itemView);
             subj = itemView.findViewById(R.id.subj);
             locality=itemView.findViewById(R.id.locality);
+
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     Intent intent = new Intent(mContext, ComplaintDetails.class);
-                    intent.putExtra("subject", list.get(getAdapterPosition()).getSubject());
-                    intent.putExtra("locality",list.toArray());
+                    intent.putExtra("Complaints", list.get(getAdapterPosition()).getSubject());
+                    intent.putExtra("ComplaintId", list.get(getAdapterPosition()).getComplaintId());
+
                     mContext.startActivity(intent);
                 }
             });

@@ -91,6 +91,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:id="@+id/subj_tv"
                 android:textColor="@color/black"
                 android:text="Suspicious Activity in Locality"
                 android:fontFamily="@font/poppins_medium" />
@@ -108,6 +109,7 @@
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:id="@+id/loc"
                     android:text="Rajeev Nagar"
                     android:textColor="@color/black"
                     android:layout_weight="1"
@@ -121,6 +123,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:id="@+id/lar"
                     android:text="8222451165"
                     android:textColor="@color/grey"
                     android:fontFamily="@font/poppins_medium" />
@@ -172,6 +175,7 @@
                     <TextView
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
+                        android:id="@+id/nametv"
                         android:text="Rahul Sharma"
                         android:textColor="@color/black"
                         android:layout_weight="1"
@@ -193,6 +197,7 @@
                         android:fontFamily="@font/poppins_medium"/>
                     <TextView
                         android:layout_width="0dp"
+                        android:id="@+id/gendertv"
                         android:layout_height="wrap_content"
                         android:text="Male"
                         android:textColor="@color/black"
@@ -216,6 +221,7 @@
                     <TextView
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
+                        android:id="@+id/age_tv"
                         android:text="25"
                         android:textColor="@color/black"
                         android:layout_weight="1"
@@ -238,6 +244,7 @@
                     <TextView
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
+                        android:id="@+id/aadhartv"
                         android:text="524678524568"
                         android:textColor="@color/black"
                         android:layout_weight="1"
@@ -261,6 +268,7 @@
                         android:layout_height="wrap_content"
                         android:text="H No.20, IPC Residency"
                         android:textColor="@color/black"
+                        android:id="@+id/addtv"
                         android:layout_weight="1"
                         android:fontFamily="@font/poppins_medium" />
 
@@ -281,6 +289,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:text="Piplani"
+                        android:id="@+id/loca"
                         android:textColor="@color/black"
                         android:layout_weight="1"
                         android:fontFamily="@font/poppins_medium" />
@@ -302,6 +311,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:text="814554"
+                        android:id="@+id/pin"
                         android:textColor="@color/black"
                         android:layout_weight="1"
                         android:fontFamily="@font/poppins_medium" />
@@ -322,6 +332,7 @@
                     <TextView
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
+                        android:id="@+id/emailtv"
                         android:text="abc@gmail.com"
                         android:textColor="@color/black"
                         android:layout_weight="1"
@@ -344,6 +355,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:text="8245565465"
+                        android:id="@+id/mob"
                         android:textColor="@color/black"
                         android:layout_weight="1"
                         android:fontFamily="@font/poppins_medium" />
@@ -376,6 +388,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:text="Burglary In Electronics Shop"
+                        android:id="@+id/subject_tv"
                         android:textColor="@color/black"
                         android:layout_weight="1"
                         android:fontFamily="@font/poppins_medium" />
@@ -397,6 +410,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:text="26/01/2020"
+                        android:id="@+id/datetv"
                         android:textColor="@color/black"
                         android:layout_weight="1"
                         android:fontFamily="@font/poppins_medium" />
@@ -417,6 +431,7 @@
                     <TextView
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
+                        android:id="@+id/locality"
                         android:text="Rajeev Nagar"
                         android:textColor="@color/black"
                         android:layout_weight="1"
@@ -442,6 +457,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:text="Suspicious Activity"
+                        android:id="@+id/des"
                         android:textColor="@color/black"
                         android:layout_weight="1"
                         android:fontFamily="@font/poppins_medium" />
@@ -462,6 +478,7 @@
                     <TextView
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
+                        android:id="@+id/sugg"
                         android:text="Keep A Vigil At Night"
                         android:textColor="@color/black"
                         android:layout_weight="1"

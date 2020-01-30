@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -20,6 +21,7 @@ import com.google.firebase.auth.FirebaseUser;
 public class SignUp extends AppCompatActivity {
 
     TextInputEditText emailEt, passwordEt;
+    TextView login;
     private FirebaseAuth mAuth;
     private static final String TAG = "SignUp";
     MaterialButton signupBtn;
@@ -32,9 +34,17 @@ public class SignUp extends AppCompatActivity {
         emailEt = findViewById(R.id.emailEt);
         passwordEt = findViewById(R.id.passwordEt);
         signupBtn = findViewById(R.id.btn_signup);
+        login = findViewById(R.id.tv_signup);
 
         mAuth = FirebaseAuth.getInstance();
         FirebaseUser currentUser = mAuth.getCurrentUser();
+
+        login.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(SignUp.this,MainActivity.class));
+            }
+        });
 
 
 
