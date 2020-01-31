@@ -103,13 +103,14 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Authority :"
+                    android:text="Date :"
                     android:layout_weight="0"
                     android:fontFamily="@font/poppins_medium"/>
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:text="Inspector "
+                    android:id="@+id/datetv"
+                    android:text="01/02/2020 "
                     android:textColor="@color/black"
                     android:layout_weight="1"
                     android:fontFamily="@font/poppins_medium"/>
@@ -173,6 +174,7 @@
                     <TextView
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
+                        android:id="@+id/authoritytv"
                         android:text="Inspector"
                         android:textColor="@color/black"
                         android:layout_weight="1"
@@ -194,6 +196,7 @@
                     <TextView
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
+                        android:id="@+id/authorityname"
                         android:text="Mr.Ashok Kumar"
                         android:textColor="@color/black"
                         android:layout_weight="1"
@@ -215,6 +218,7 @@
                     <TextView
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
+                        android:id="@+id/date_tv"
                         android:text="26/01/2020"
                         android:textColor="@color/black"
                         android:layout_weight="1"
@@ -236,6 +240,7 @@
                     <TextView
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
+                        android:id="@+id/timetv"
                         android:text="23:00"
                         android:textColor="@color/black"
                         android:layout_weight="1"
@@ -273,6 +278,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:text="Rahul Sharma"
+                        android:id="@+id/nametv"
                         android:textColor="@color/black"
                         android:layout_weight="1"
                         android:fontFamily="@font/poppins_medium" />
@@ -295,6 +301,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:text="Male"
+                        android:id="@+id/gendertv"
                         android:textColor="@color/black"
                         android:layout_weight="1"
                         android:fontFamily="@font/poppins_medium" />
@@ -318,6 +325,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:text="25"
+                        android:id="@+id/age_tv"
                         android:textColor="@color/black"
                         android:layout_weight="1"
                         android:fontFamily="@font/poppins_medium" />
@@ -340,6 +348,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:text="524678524568"
+                        android:id="@+id/aadhartv"
                         android:textColor="@color/black"
                         android:layout_weight="1"
                         android:fontFamily="@font/poppins_medium" />
@@ -362,6 +371,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:text="abc@gmail.com"
+                        android:id="@+id/emailtv"
                         android:textColor="@color/black"
                         android:layout_weight="1"
                         android:fontFamily="@font/poppins_medium" />
@@ -383,6 +393,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:text="8245565465"
+                        android:id="@+id/mob"
                         android:textColor="@color/black"
                         android:layout_weight="1"
                         android:fontFamily="@font/poppins_medium" />
@@ -404,6 +415,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:text="To Hold A Peace Ralley"
+                        android:id="@+id/destv"
                         android:textColor="@color/black"
                         android:layout_weight="1"
                         android:fontFamily="@font/poppins_medium" />

@@ -59,6 +59,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:id="@+id/subject_tv"
                 android:textColor="@color/black"
                 android:text="Request NOC For A Loan"
                 android:fontFamily="@font/poppins_medium" />
@@ -76,6 +77,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:id="@+id/categorytv"
                     android:text="Job"
                     android:textColor="@color/black"
                     android:layout_weight="1"

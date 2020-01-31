@@ -355,7 +355,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:text="8245565465"
-                        android:id="@+id/mob"
+                        android:id="@+id/mobtv"
                         android:textColor="@color/black"
                         android:layout_weight="1"
                         android:fontFamily="@font/poppins_medium" />

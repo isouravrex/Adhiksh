@@ -9,6 +9,8 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.MenuItem;
@@ -37,6 +39,7 @@ public class CitizenHomepage extends AppCompatActivity implements NavigationView
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_citizen_homepage);
         setUIViews();
+        loadFragment(new CitizenHomeFragment());
 
 //        loadFragment(CitizenHomeFragment);
 
@@ -54,8 +57,8 @@ public class CitizenHomepage extends AppCompatActivity implements NavigationView
         });
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
-        
-        navigationView.setCheckedItem(R.id.home_icon);
+        navigationView.setNavigationItemSelectedListener(navListner);
+//        navigationView.setSele(R.id.home_icon)
 
 
 //        registerFIR.setOnClickListener(new View.OnClickListener() {
@@ -118,70 +121,115 @@ public class CitizenHomepage extends AppCompatActivity implements NavigationView
             super.onBackPressed();
     }
 
-    @Override
-    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+    private NavigationView.OnNavigationItemSelectedListener navListner =
+            new NavigationView.OnNavigationItemSelectedListener() {
+                @Override
+                public boolean onNavigationItemSelected(@NonNull MenuItem item) {
 
-        Fragment selectedFragment = null;
-        // Handle navigation view item clicks here.
-        switch (item.getItemId()) {
+                    Fragment selectedFragment = null;
+                    // Handle navigation view item clicks here.
+                    switch (item.getItemId()) {
 
-            case R.id.logout: {
-                //do somthing
-                MDToast mdToast = MDToast.makeText(CitizenHomepage.this, "Log out successful", 1000, 1);
-                mdToast.show();
-                finish();
-                break;
-            }
-            case R.id.fir_icon:{
+                        case R.id.logout: {
+                            //do somthing
+                            MDToast mdToast = MDToast.makeText(CitizenHomepage.this, "Log out successful", 1000, 1);
+                            mdToast.show();
+                            finish();
+                            break;
+                        }
+                        case R.id.fir_icon:{
 
-                selectedFragment = new FragmentFir();
-                loadFragment(selectedFragment);
-                break;
-            }
+                            selectedFragment = new FragmentFir();
+                            loadFragment(selectedFragment);
+                            break;
+                        }
 
-            case R.id.noc_icon:{
+                        case R.id.noc_icon:{
 
-                selectedFragment = new FragmentNoc();
-                loadFragment(selectedFragment);
-                break;
-            }
+                            selectedFragment = new FragmentNoc();
+                            loadFragment(selectedFragment);
+                            break;
+                        }
 
-            case R.id.appointment_icon:{
+                        case R.id.appointment_icon:{
 
-                selectedFragment = new AppointmentFragment();
-                loadFragment(selectedFragment);
-                break;
-            }
+                            selectedFragment = new AppointmentFragment();
+                            loadFragment(selectedFragment);
+                            break;
+                        }
 
-            case R.id.complaint_icon:{
+                        case R.id.complaint_icon:{
 
-                selectedFragment = new ComplaintFragment();
-                loadFragment(selectedFragment);
-                break;
-            }
+                            selectedFragment = new ComplaintFragment();
+                            loadFragment(selectedFragment);
+                            break;
+                        }
 
-            case R.id.home_icon:{
+                        case R.id.home_icon:{
 
-                selectedFragment = new CitizenHomeFragment();
-                loadFragment(selectedFragment);
-                break;
-            }
+                            selectedFragment = new CitizenHomeFragment();
+                            loadFragment(selectedFragment);
+                            break;
+                        }
+                        case R.id.faq:{
+
+                            openUrl("http://www.ncrb.org/ncrb/WorkersCompensation/FAQs/tabid/494/Default.aspx");
+
+                            break;
+                        }
+
+                        case R.id.help:{
+
+                            myweb();
+                            break;
+                        }
+
+                        case R.id.sosd:{
+
+                            selectedFragment = new SosFragment();
+                            loadFragment(selectedFragment);
+                            break;
+                        }
 
 
-        }
 
-        //close navigation drawer
-        drawer.closeDrawer(GravityCompat.START);
-        return true;
-    }
+                    }
+
+                    //close navigation drawer
+                    drawer.closeDrawer(GravityCompat.START);
+                    return true;
+                }
+            };
+
+//    @Override
+//    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+//
+//
+//    }
 
     private void loadFragment(Fragment selectedFragment) {
 
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
         transaction.replace(R.id.fragment_containerr,selectedFragment);
-        transaction.addToBackStack(null).commit();
-//        transaction.commit();
+//        transaction.addToBackStack(null);
+        transaction.commit();
     }
 
+
+    @Override
+    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+        return false;
+    }
+
+    public void myweb(){
+        openUrl("http://ncrb.gov.in/index.htm");
+    }
+
+    private void openUrl(String s) {
+
+        Uri uri=Uri.parse(s);
+        Intent launch=new Intent(Intent.ACTION_VIEW,uri);
+        startActivity(launch);
+    }
 
 }

@@ -3,6 +3,7 @@ package com.bandwidth.adhiksh.Fragments;
 
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -13,6 +14,8 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.bandwidth.adhiksh.AppointmentAdapter;
+import com.bandwidth.adhiksh.ComplaintAdapter;
+import com.bandwidth.adhiksh.Model;
 import com.bandwidth.adhiksh.R;
 import com.bandwidth.adhiksh.AppModel;
 import com.google.firebase.database.DataSnapshot;
@@ -35,7 +38,7 @@ public class AppointmentFragment extends Fragment {
     AppointmentAdapter adapter;
 
     FirebaseDatabase database = FirebaseDatabase.getInstance();
-    DatabaseReference myRef = database.getReference("/");
+    DatabaseReference myRef = database.getReference("Appointments");
 
     private static final String TAG = "AppointmentFragment";
 
@@ -56,34 +59,34 @@ public class AppointmentFragment extends Fragment {
         adapter = new AppointmentAdapter(getActivity(), list);
         recyclerView.setAdapter(adapter);
 
-        getDataFromDB();
+//        getDataFromDB();
         return  view;
     }
 
+    @Override
+    public void onStart() {
+        super.onStart();
 
-    private void getDataFromDB(){
         myRef.addValueEventListener(new ValueEventListener() {
             @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                // This method is called once with the initial value and again
-                // whenever data at this location is updated.
-                //String value = dataSnapshot.getValue(String.class);
-                DataSnapshot temp = dataSnapshot.child("appointment");
-                for (DataSnapshot demo: temp.getChildren()) {
-                    String name = demo
-                            .child("Personnel Name").getValue().toString();
-                    AppModel appModel = new AppModel(name);
-                    list.add(appModel);
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                for (DataSnapshot appointmentSnapshot: dataSnapshot.getChildren()){
+
+                    AppModel appointment= appointmentSnapshot.getValue(AppModel.class);
+                    list.add(appointment);
+
                 }
-                adapter.notifyDataSetChanged();
+                adapter = new AppointmentAdapter(getActivity(),list);
+                recyclerView.setAdapter(adapter);
             }
 
             @Override
-            public void onCancelled(DatabaseError error) {
-                // Failed to read value
-                Log.w(TAG, "Failed to read value.", error.toException());
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
             }
         });
     }
+
+
 
 }

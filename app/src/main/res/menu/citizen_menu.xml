@@ -27,6 +27,24 @@
         android:id="@+id/noc_icon"
         android:icon="@drawable/noc"
         android:title="NOC Requests" />
+
+    <item
+        android:id="@+id/sosd"
+        android:title="SOS"
+        />
+
+
+    <item
+        android:id="@+id/faq"
+        android:title="FAQ"
+        />
+
+
+    <item
+        android:id="@+id/help"
+        android:title="Help Centre"
+        />
+
     <item
         android:id="@+id/logout"
         android:title="Log Out"

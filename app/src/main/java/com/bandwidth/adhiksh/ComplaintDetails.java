@@ -129,7 +129,7 @@ public class ComplaintDetails extends AppCompatActivity {
                 locae=findViewById(R.id.loca);
               pine  =findViewById(R.id.pin);
                 emaile=findViewById(R.id.emailtv);
-                mobe=findViewById(R.id.mob);
+                mobe=findViewById(R.id.mobtv);
                 subjecte=findViewById(R.id.subject_tv);
                datee=findViewById(R.id.datetv);
                 localitye=findViewById(R.id.locality);

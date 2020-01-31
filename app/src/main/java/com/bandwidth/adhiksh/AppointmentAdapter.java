@@ -62,6 +62,7 @@ public class AppointmentAdapter extends RecyclerView.Adapter<AppointmentAdapter.
                 public void onClick(View v) {
                     Intent intent = new Intent(mContext, AppointmentDetails.class);
                     intent.putExtra("subject", list.get(getAdapterPosition()).getSubject());
+                    intent.putExtra("appointmentId", list.get(getAdapterPosition()).getAppointmentId());
                     mContext.startActivity(intent);
                 }
             });

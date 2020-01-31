@@ -13,6 +13,7 @@ import com.google.android.material.button.MaterialButton;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.valdesekamdem.library.mdtoast.MDToast;
 
 public class ComplaintForm extends AppCompatActivity {
 
@@ -89,7 +90,9 @@ public class ComplaintForm extends AppCompatActivity {
         }
         else
         {
-            Toast.makeText(this,"Enter All Fields",Toast.LENGTH_LONG).show();
+//            Toast.makeText(this,"Enter All Fields",Toast.LENGTH_LONG).show();
+            MDToast mdToast = MDToast.makeText(this, "Enter all Feilds", 1000, 3);
+
         }
 
 
