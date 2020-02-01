@@ -207,7 +207,8 @@
         </LinearLayout>
 
 
-        <include layout="@layout/card_home" />
+        <include layout="@layout/card_home"
+            android:id="@+id/ab"/>
 
         <include layout="@layout/card_home" />
 

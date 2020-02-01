@@ -9,9 +9,11 @@ import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.bandwidth.adhiksh.Activities.AppointmentDetails;
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
+import com.valdesekamdem.library.mdtoast.MDToast;
 
 import static com.bandwidth.adhiksh.MainActivity.b;
 
@@ -41,7 +43,8 @@ public class FirDetails extends AppCompatActivity {
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(FirDetails.this,"Response submitted",Toast.LENGTH_LONG).show();
+                MDToast mdToast = MDToast.makeText(FirDetails.this, "Response Submitted", 1000, 1);
+                mdToast.show();
                 startActivity(new Intent(FirDetails.this, AuthorityHomepage.class));
             }
 

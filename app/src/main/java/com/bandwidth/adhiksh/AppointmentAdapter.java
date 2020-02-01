@@ -11,6 +11,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bandwidth.adhiksh.Activities.AppointmentDetails;
+import com.valdesekamdem.library.mdtoast.MDToast;
 
 import java.util.List;
 
@@ -61,6 +62,7 @@ public class AppointmentAdapter extends RecyclerView.Adapter<AppointmentAdapter.
                 @Override
                 public void onClick(View v) {
                     Intent intent = new Intent(mContext, AppointmentDetails.class);
+
                     intent.putExtra("subject", list.get(getAdapterPosition()).getSubject());
                     intent.putExtra("appointmentId", list.get(getAdapterPosition()).getAppointmentId());
                     mContext.startActivity(intent);

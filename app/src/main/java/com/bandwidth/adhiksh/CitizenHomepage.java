@@ -132,7 +132,7 @@ public class CitizenHomepage extends AppCompatActivity implements NavigationView
 
                         case R.id.logout: {
                             //do somthing
-                            MDToast mdToast = MDToast.makeText(CitizenHomepage.this, "Log out successful", 1000, 1);
+                            MDToast mdToast = MDToast.makeText(CitizenHomepage.this, "Log out successful", 2000, 1);
                             mdToast.show();
                             finish();
                             break;

@@ -60,10 +60,10 @@ public class SignUp extends AppCompatActivity {
                 if(!(TextUtils.isEmpty(email)||TextUtils.isEmpty(password))) {
                     createUser(email, password);
                 }
-                else
-                {
-                    MDToast.makeText(SignUp.this, "Enter all Feilds", 1000, 3).show();
-                }
+//                else
+//                {
+//                    MDToast.makeText(SignUp.this, "Enter all Feilds", 1000, 3).show();
+//                }
 
 
 

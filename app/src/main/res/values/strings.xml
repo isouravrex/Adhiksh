@@ -23,9 +23,9 @@
         <item>Superintendent of Police (SP)</item>
         <item>Assistant Superintendent of Police (ASP)</item>
         <item>Inspector</item>
-
-
     </string-array>
+
+    <string name="map_key" translatable="false">AIzaSyB_nsCQO2Vijx3FNu6iLH7Nxf8aviOP54E</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

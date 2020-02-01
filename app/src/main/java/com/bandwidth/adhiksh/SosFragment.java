@@ -1,6 +1,7 @@
 package com.bandwidth.adhiksh;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -20,8 +21,8 @@ import com.valdesekamdem.library.mdtoast.MDToast;
  */
 public class SosFragment extends Fragment {
 
-    FirebaseDatabase database = FirebaseDatabase.getInstance();
-    DatabaseReference databaseSos = database.getReference("Sos");
+//    FirebaseDatabase database = FirebaseDatabase.getInstance();
+//    DatabaseReference databaseSos = database.getReference("Sos");
     MaterialButton sosbt;
 
 
@@ -42,15 +43,20 @@ public class SosFragment extends Fragment {
 
             @Override
             public void onClick(View v) {
-                int lati=20,lngi=20;
-                String id = databaseSos.push().getKey();
-                String lat=String.valueOf(lati);
-                String lng=String.valueOf(lngi);
 
+                startActivity(new Intent(getActivity(), map.class));
+                MDToast mdToast = MDToast.makeText(getActivity(), "Keep Calm!! We Are On Our Way To Help", 12000, 1);
+                mdToast.show();
 
-                databaseSos.child("Id").setValue(id);
-                databaseSos.child("lat").setValue(lat);
-                databaseSos.child("lng").setValue(lng);
+//                int lati=20,lngi=20;
+//                String id = databaseSos.push().getKey();
+//                String lat=String.valueOf(lati);
+//                String lng=String.valueOf(lngi);
+//
+//
+//                databaseSos.child("Id").setValue(id);
+//                databaseSos.child("lat").setValue(lat);
+//                databaseSos.child("lng").setValue(lng);
 
 //                MDToast mdToast = MDToast.makeText(SosFragment.this, "Log out successful", 1000, 1);
 //                mdToast.show();

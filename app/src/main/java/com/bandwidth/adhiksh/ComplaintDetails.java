@@ -11,6 +11,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.bandwidth.adhiksh.Activities.AppointmentDetails;
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
@@ -19,6 +20,7 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.valdesekamdem.library.mdtoast.MDToast;
 
 import java.util.List;
 
@@ -58,7 +60,8 @@ public class ComplaintDetails extends AppCompatActivity {
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(ComplaintDetails.this,"Response submitted",Toast.LENGTH_LONG).show();
+                MDToast mdToast = MDToast.makeText(ComplaintDetails.this, "Response Submitted", 1000, 1);
+                mdToast.show();
                 startActivity(new Intent(ComplaintDetails.this, AuthorityHomepage.class));
             }
 

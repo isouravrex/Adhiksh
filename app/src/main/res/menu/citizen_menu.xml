@@ -30,24 +30,30 @@
 
     <item
         android:id="@+id/sosd"
+        android:icon="@drawable/sos"
         android:title="SOS"
         />
 
 
     <item
         android:id="@+id/faq"
+        android:icon="@drawable/faq"
+
         android:title="FAQ"
         />
 
 
     <item
         android:id="@+id/help"
+        android:icon="@drawable/helpcentre"
         android:title="Help Centre"
         />
 
     <item
         android:id="@+id/logout"
         android:title="Log Out"
+        android:icon="@drawable/logout"
+
         />
 
 </menu>

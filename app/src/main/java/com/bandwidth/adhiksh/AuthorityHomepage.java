@@ -161,12 +161,11 @@ public class AuthorityHomepage extends AppCompatActivity {
 //                            break;
 //                        }
 //
-//                        case R.id.complaint_icon:{
-//
-//                            selectedFragment = new ComplaintFragment();
-//                            loadFragment(selectedFragment);
-//                            break;
-//                        }
+                        case R.id.sos_help:{
+
+                            startActivity(new Intent(AuthorityHomepage.this, map.class));
+                            break;
+                        }
 
                         case R.id.home_icon:{
 

@@ -20,6 +20,7 @@ import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.valdesekamdem.library.mdtoast.MDToast;
 
 import android.os.Bundle;
 import android.view.View;
@@ -56,6 +57,9 @@ public class MainActivity extends AppCompatActivity {
                 public void onClick(View v) {
                     if(radioButtonAuthority.isChecked()) {
                         startActivity(new Intent(MainActivity.this, AuthorityHomepage.class));
+                        MDToast mdToast = MDToast.makeText(MainActivity.this, "Log In Successful As Authority", 3000, 1);
+                        mdToast.show();
+
                         b = false;
                     }
                     else if(radioButtonCitizen.isChecked()) {
@@ -96,13 +100,15 @@ public class MainActivity extends AppCompatActivity {
                             Log.d(TAG, "signInWithEmail:success");
                             FirebaseUser user = mAuth.getCurrentUser();
                             startActivity(new Intent(MainActivity.this, CitizenHomepage.class));
+                            MDToast mdToast = MDToast.makeText(MainActivity.this, "Log In Successful", 3000, 1);
+                            mdToast.show();
 
                         } else {
                             progressBar.setVisibility(View.GONE);
                             // If sign in fails, display a message to the user.
                             Log.w(TAG, "signInWithEmail:failure", task.getException());
-                            Toast.makeText(MainActivity.this, "Authentication failed.",
-                                    Toast.LENGTH_SHORT).show();
+                            MDToast mdToast = MDToast.makeText(MainActivity.this, "Authentucation Failed", 2000, 3);
+                            mdToast.show();
                         }
                     }
                 });

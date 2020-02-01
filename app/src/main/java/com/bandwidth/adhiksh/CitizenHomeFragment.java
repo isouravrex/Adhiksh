@@ -6,6 +6,7 @@ import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 
+import android.text.Layout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,6 +19,8 @@ import android.widget.LinearLayout;
 public class CitizenHomeFragment extends Fragment {
 
     LinearLayout registerFIR, requestNOC, registerComplaint, requestAppointment;
+    Layout inc;
+
 
 
     public CitizenHomeFragment() {
@@ -35,6 +38,7 @@ public class CitizenHomeFragment extends Fragment {
         registerComplaint=view.findViewById(R.id.registerComplaint);
         requestAppointment=view.findViewById(R.id.requestAppointment);
         requestNOC=view.findViewById(R.id.requestNOC);
+
 
         registerFIR.setOnClickListener(new View.OnClickListener() {
             @Override

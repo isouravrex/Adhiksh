@@ -6,17 +6,23 @@
         android:title="Home" />
 
     <item
+        android:id="@+id/sos_help"
+        android:icon="@drawable/sos"
+        android:title="SOS Help" />
+
+    <item
         android:id="@+id/faq"
-        android:icon="@drawable/question"
+        android:icon="@drawable/faq"
         android:title="FAQ" />
 
     <item
         android:id="@+id/help"
-        android:icon="@drawable/question"
+        android:icon="@drawable/helpcentre"
         android:title="Help Centre" />
 
 
     <item
+        android:icon="@drawable/logout"
         android:id="@+id/logout"
         android:title="Log Out"
         />

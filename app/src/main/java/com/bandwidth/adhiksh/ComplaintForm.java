@@ -34,7 +34,6 @@ public class ComplaintForm extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 addComplaint();
-                startActivity(new Intent(ComplaintForm.this, FormSubmission.class));
             }
         });
 
@@ -76,14 +75,19 @@ public class ComplaintForm extends AppCompatActivity {
         String description = descriptionc.getText().toString();
         String solution = solutionc.getText().toString();
 
-        if(!TextUtils.isEmpty(name)||!TextUtils.isEmpty(age)||!TextUtils.isEmpty(aadhar)||!TextUtils.isEmpty(address)||!TextUtils.isEmpty(pin)
-                ||!TextUtils.isEmpty(mobile)||!TextUtils.isEmpty(subject)||!TextUtils.isEmpty(email)){
+        if(!(TextUtils.isEmpty(name)||TextUtils.isEmpty(age)
+                ||TextUtils.isEmpty(mobile)||TextUtils.isEmpty(subject)||TextUtils.isEmpty(email))){
 
             String id = databaseComplaints.push().getKey();
 
             Model complaints=new Model(id,name,age,aadhar,address,locality,pin,email,mobile,subject,date,time,location,description,solution);
 
             databaseComplaints.child(id).setValue(complaints);
+            MDToast.makeText(this, "Complaint Submitted", 1000, 1).show();
+
+            startActivity(new Intent(ComplaintForm.this, FormSubmission.class));
+
+
 
 
 
@@ -91,7 +95,7 @@ public class ComplaintForm extends AppCompatActivity {
         else
         {
 //            Toast.makeText(this,"Enter All Fields",Toast.LENGTH_LONG).show();
-            MDToast mdToast = MDToast.makeText(this, "Enter all Feilds", 1000, 3);
+            MDToast.makeText(this, "Enter all Feilds", 1000, 3).show();
 
         }
 

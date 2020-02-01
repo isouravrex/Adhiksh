@@ -6,10 +6,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.textfield.TextInputLayout;
+import com.google.firebase.database.FirebaseDatabase;
 
 import static com.bandwidth.adhiksh.MainActivity.b;
 
@@ -17,6 +19,10 @@ public class NocDetails extends AppCompatActivity {
     MaterialButton back;
     TextInputLayout remarks;
     LinearLayout selectc,statuss;
+    FirebaseDatabase database = FirebaseDatabase.getInstance();
+
+    TextView subj,auth,authname,datec,aadhare,timec,namee,emaile,mobe,subjecte,datee,agee,desc;
+
 
 
 
