@@ -173,7 +173,7 @@ public class CitizenHomepage extends AppCompatActivity implements NavigationView
                         }
                         case R.id.faq:{
 
-                            openUrl("http://www.ncrb.org/ncrb/WorkersCompensation/FAQs/tabid/494/Default.aspx");
+                            openUrl("https://digitalpolice.gov.in/");
 
                             break;
                         }

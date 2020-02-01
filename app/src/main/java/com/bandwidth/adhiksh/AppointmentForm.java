@@ -102,9 +102,9 @@ public class AppointmentForm extends AppCompatActivity {
             String id = databaseAppoint.push().getKey();
 
             AppModel appointments=new AppModel(id,name,age,email,mobile,subject,date,time,authorityname,description,authority);
-            AppModel appoint = new AppModel(lar);
+//            AppModel appoint = new AppModel(lar);
             databaseAppoint.child(id).setValue(appointments);
-            databaseAppoint.child(id).setValue(appoint);
+//            databaseAppoint.child(id).setValue(appoint);
             startActivity(new Intent(AppointmentForm.this,FormSubmission.class));
 
 

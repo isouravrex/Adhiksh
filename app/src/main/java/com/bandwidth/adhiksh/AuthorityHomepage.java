@@ -143,7 +143,7 @@ public class AuthorityHomepage extends AppCompatActivity {
                         }
                         case R.id.faq:{
 
-                            openUrl("http://www.ncrb.org/ncrb/WorkersCompensation/FAQs/tabid/494/Default.aspx");
+                            openUrl("https://digitalpolice.gov.in/n ");
                             break;
                         }
 

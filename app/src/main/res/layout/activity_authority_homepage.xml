@@ -25,7 +25,7 @@
         <ImageView
             android:layout_width="32dp"
             android:layout_height="32dp"
-            android:layout_weight="1"
+            android:layout_marginLeft="4dp"
             android:backgroundTint="@color/white"
             android:id="@+id/btn_drawer"
             android:padding="4dp"
