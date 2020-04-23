@@ -25,6 +25,16 @@
         <item>Inspector</item>
     </string-array>
 
+    <string-array name="panel">
+        <item>Assault</item>
+        <item>Stalking</item>
+        <item>Robbery</item>
+        <item>Kidnapping</item>
+        <item>Homicide</item>
+        <item>Hostage</item>
+        <item>Sexual Assualt</item>
+    </string-array>
+
     <string name="map_key" translatable="false">AIzaSyB_nsCQO2Vijx3FNu6iLH7Nxf8aviOP54E</string>
 
     <!-- TODO: Remove or change this placeholder text -->

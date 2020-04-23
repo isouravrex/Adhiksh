@@ -13,9 +13,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".map">
+        <activity android:name=".AuthorityPanel">
+
 
         </activity>
+        <activity android:name=".map"></activity>
         <activity android:name=".Otp" />
         <activity android:name=".SplashScreen">
             <intent-filter>
@@ -49,7 +51,6 @@
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyCdtIgz27SD0l7A05Nu9J_8BzninjaCuyM" />
-
     </application>
 
 </manifest>

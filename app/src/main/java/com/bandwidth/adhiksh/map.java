@@ -51,9 +51,11 @@ package com.bandwidth.adhiksh;//package com.bandwidth.adhiksh;
 //}
 
 import android.Manifest;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.Location;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Toast;
 
 import com.bandwidth.adhiksh.R;
@@ -68,11 +70,13 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
+import com.google.android.material.button.MaterialButton;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.valdesekamdem.library.mdtoast.MDToast;
 
 import androidx.annotation.NonNull;
 import androidx.core.app.ActivityCompat;
@@ -86,6 +90,7 @@ public class map extends FragmentActivity implements OnMapReadyCallback {
     private static final int REQUEST_CODE = 101;
     FirebaseDatabase database = FirebaseDatabase.getInstance();
     DatabaseReference databaseSos = database.getReference("Sos");
+    MaterialButton info;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -93,6 +98,19 @@ public class map extends FragmentActivity implements OnMapReadyCallback {
         setContentView(R.layout.activity_map);
         fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this);
         fetchLocation();
+        setUIViews();
+        if(b==true){
+            info.setVisibility(View.INVISIBLE);
+        }
+
+        info.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(map.this, AuthorityPanel.class));
+
+            }
+        });
+
     }
 
     private void fetchLocation() {
@@ -170,5 +188,8 @@ public class map extends FragmentActivity implements OnMapReadyCallback {
                 }
                 break;
         }
+    }
+    public void setUIViews(){
+        info=findViewById(R.id.btn_info);
     }
 }
