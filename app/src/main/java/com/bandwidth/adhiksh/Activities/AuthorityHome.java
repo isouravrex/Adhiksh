@@ -1,8 +1,10 @@
-package com.bandwidth.adhiksh;
+package com.bandwidth.adhiksh.Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.bandwidth.adhiksh.R;
 
 public class AuthorityHome extends AppCompatActivity {
 

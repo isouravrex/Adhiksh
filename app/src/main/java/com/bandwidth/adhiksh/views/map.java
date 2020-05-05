@@ -1,4 +1,4 @@
-package com.bandwidth.adhiksh;//package com.bandwidth.adhiksh;
+package com.bandwidth.adhiksh.views;//package com.bandwidth.adhiksh;
 //
 //import androidx.annotation.NonNull;
 //import androidx.appcompat.app.AppCompatActivity;
@@ -56,8 +56,8 @@ import android.content.pm.PackageManager;
 import android.location.Location;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Toast;
 
+import com.bandwidth.adhiksh.Activities.AuthorityPanel;
 import com.bandwidth.adhiksh.R;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.SupportMapFragment;
@@ -76,13 +76,12 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-import com.valdesekamdem.library.mdtoast.MDToast;
 
 import androidx.annotation.NonNull;
 import androidx.core.app.ActivityCompat;
 import androidx.fragment.app.FragmentActivity;
 
-import static com.bandwidth.adhiksh.MainActivity.b;
+import static com.bandwidth.adhiksh.Activities.MainActivity.b;
 
 public class map extends FragmentActivity implements OnMapReadyCallback {
     Location currentLocation;

@@ -1,4 +1,4 @@
-package com.bandwidth.adhiksh;
+package com.bandwidth.adhiksh.adapter;
 
 import android.content.Context;
 import android.content.Intent;
@@ -9,6 +9,10 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.bandwidth.adhiksh.views.ComplaintDetails;
+import com.bandwidth.adhiksh.model.Model;
+import com.bandwidth.adhiksh.R;
 
 import java.util.List;
 

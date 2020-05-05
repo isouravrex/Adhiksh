@@ -8,16 +8,13 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.bandwidth.adhiksh.AppointmentAdapter;
-import com.bandwidth.adhiksh.ComplaintAdapter;
-import com.bandwidth.adhiksh.Model;
+import com.bandwidth.adhiksh.adapter.AppointmentAdapter;
 import com.bandwidth.adhiksh.R;
-import com.bandwidth.adhiksh.AppModel;
+import com.bandwidth.adhiksh.model.AppModel;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;

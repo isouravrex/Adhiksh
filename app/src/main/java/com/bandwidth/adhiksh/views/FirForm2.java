@@ -1,4 +1,4 @@
-package com.bandwidth.adhiksh;
+package com.bandwidth.adhiksh.views;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,6 +6,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+import com.bandwidth.adhiksh.Activities.FormSubmission;
+import com.bandwidth.adhiksh.R;
 import com.google.android.material.button.MaterialButton;
 
 public class FirForm2 extends AppCompatActivity {

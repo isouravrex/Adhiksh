@@ -7,7 +7,7 @@
     android:gravity="center"
     android:orientation="vertical"
     android:background="#F9F9F9"
-    tools:context=".Otp">
+    tools:context=".Activities.Otp">
 
     <TextView
         android:layout_width="match_parent"

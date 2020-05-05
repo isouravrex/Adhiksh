@@ -1,4 +1,4 @@
-package com.bandwidth.adhiksh;
+package com.bandwidth.adhiksh.model;
 
 public class NocModel {
 

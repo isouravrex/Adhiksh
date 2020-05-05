@@ -1,4 +1,4 @@
-package com.bandwidth.adhiksh;
+package com.bandwidth.adhiksh.model;
 
 import java.util.ArrayList;
 
@@ -26,7 +26,7 @@ public class Model {
 
     }
 
-    public Model(ArrayList<com.bandwidth.adhiksh.AppModel> appModel) {
+    public Model(ArrayList<com.bandwidth.adhiksh.model.AppModel> appModel) {
         AppModel = appModel;
     }
 
@@ -169,11 +169,11 @@ public class Model {
         this.solution = solution;
     }
 
-    public ArrayList<com.bandwidth.adhiksh.AppModel> getAppModel() {
+    public ArrayList<com.bandwidth.adhiksh.model.AppModel> getAppModel() {
         return AppModel;
     }
 
-    public void setAppModel(ArrayList<com.bandwidth.adhiksh.AppModel> appModel) {
+    public void setAppModel(ArrayList<com.bandwidth.adhiksh.model.AppModel> appModel) {
         AppModel = appModel;
     }
 }

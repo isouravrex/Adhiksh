@@ -1,4 +1,4 @@
-package com.bandwidth.adhiksh;
+package com.bandwidth.adhiksh.views;
 
 
 import android.content.Intent;
@@ -11,6 +11,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
+
+import com.bandwidth.adhiksh.R;
 
 
 /**

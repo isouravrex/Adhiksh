@@ -8,11 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.bandwidth.adhiksh.AuthorityHomepage;
-import com.bandwidth.adhiksh.CitizenHomepage;
-import com.bandwidth.adhiksh.NocDetails;
 import com.bandwidth.adhiksh.R;
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.textfield.TextInputLayout;
@@ -23,9 +19,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.valdesekamdem.library.mdtoast.MDToast;
 
-import javax.security.auth.Subject;
-
-import static com.bandwidth.adhiksh.MainActivity.b;
+import static com.bandwidth.adhiksh.Activities.MainActivity.b;
 
 public class AppointmentDetails extends AppCompatActivity {
 

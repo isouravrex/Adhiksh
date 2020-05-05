@@ -12,10 +12,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.bandwidth.adhiksh.AppModel;
-import com.bandwidth.adhiksh.ComplaintAdapter;
-import com.bandwidth.adhiksh.FirAdapter;
-import com.bandwidth.adhiksh.Model;
+import com.bandwidth.adhiksh.adapter.ComplaintAdapter;
+import com.bandwidth.adhiksh.model.Model;
 import com.bandwidth.adhiksh.R;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;

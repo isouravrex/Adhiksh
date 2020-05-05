@@ -1,4 +1,4 @@
-package com.bandwidth.adhiksh;
+package com.bandwidth.adhiksh.adapter;
 
 import android.content.Context;
 import android.content.Intent;
@@ -11,7 +11,8 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bandwidth.adhiksh.Activities.AppointmentDetails;
-import com.valdesekamdem.library.mdtoast.MDToast;
+import com.bandwidth.adhiksh.model.AppModel;
+import com.bandwidth.adhiksh.R;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package com.bandwidth.adhiksh;
+package com.bandwidth.adhiksh.views;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,14 +7,14 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.Spinner;
-import android.widget.Toast;
 
+import com.bandwidth.adhiksh.Activities.FormSubmission;
+import com.bandwidth.adhiksh.R;
+import com.bandwidth.adhiksh.model.NocModel;
 import com.google.android.material.button.MaterialButton;
-import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.jaredrummler.materialspinner.MaterialSpinner;
 import com.valdesekamdem.library.mdtoast.MDToast;
 
 public class NOCForm extends AppCompatActivity {

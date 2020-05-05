@@ -1,19 +1,17 @@
-package com.bandwidth.adhiksh;
+package com.bandwidth.adhiksh.views;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.bandwidth.adhiksh.Activities.AppointmentDetails;
+import com.bandwidth.adhiksh.Activities.AuthorityHomepage;
+import com.bandwidth.adhiksh.R;
 import com.google.android.material.button.MaterialButton;
-import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -22,9 +20,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.valdesekamdem.library.mdtoast.MDToast;
 
-import java.util.List;
-
-import static com.bandwidth.adhiksh.MainActivity.b;
+import static com.bandwidth.adhiksh.Activities.MainActivity.b;
 
 public class ComplaintDetails extends AppCompatActivity {
 

@@ -13,13 +13,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".AuthorityPanel">
+        <activity android:name=".Activities.AuthorityPanel">
 
 
         </activity>
-        <activity android:name=".map"></activity>
-        <activity android:name=".Otp" />
-        <activity android:name=".SplashScreen">
+        <activity android:name=".views.map"></activity>
+        <activity android:name=".Activities.Otp" />
+        <activity android:name=".Activities.SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -27,23 +27,23 @@
             </intent-filter>
 
         </activity>
-        <activity android:name=".ComplaintDetails" />
-        <activity android:name=".NocDetails" />
+        <activity android:name=".views.ComplaintDetails" />
+        <activity android:name=".views.NocDetails" />
         <activity android:name=".Activities.AppointmentDetails" />
-        <activity android:name=".FirDetails" />
+        <activity android:name=".views.FirDetails" />
         <activity
-            android:name=".AuthorityHomepage"
+            android:name=".Activities.AuthorityHomepage"
             android:windowSoftInputMode="adjustPan" />
-        <activity android:name=".FormSubmission" />
-        <activity android:name=".CitizenHomepage" />
-        <activity android:name=".AuthorityHome" />
-        <activity android:name=".FirForm2" />
-        <activity android:name=".FirForm" />
-        <activity android:name=".ComplaintForm" />
-        <activity android:name=".AppointmentForm" />
-        <activity android:name=".NOCForm" />
-        <activity android:name=".SignUp" />
-        <activity android:name=".MainActivity" />
+        <activity android:name=".Activities.FormSubmission" />
+        <activity android:name=".views.CitizenHomepage" />
+        <activity android:name=".Activities.AuthorityHome" />
+        <activity android:name=".views.FirForm2" />
+        <activity android:name=".views.FirForm" />
+        <activity android:name=".views.ComplaintForm" />
+        <activity android:name=".views.AppointmentForm" />
+        <activity android:name=".views.NOCForm" />
+        <activity android:name=".Activities.SignUp" />
+        <activity android:name=".Activities.MainActivity" />
 
         <meta-data
             android:name="preloaded_fonts"

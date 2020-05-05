@@ -1,4 +1,4 @@
-package com.bandwidth.adhiksh;
+package com.bandwidth.adhiksh.views;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,20 +7,18 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
-import android.widget.EditText;
 import android.widget.Spinner;
 
+import com.bandwidth.adhiksh.Activities.FormSubmission;
+import com.bandwidth.adhiksh.R;
+import com.bandwidth.adhiksh.model.AppModel;
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.textfield.TextInputEditText;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
 import com.valdesekamdem.library.mdtoast.MDToast;
 
 import java.util.Random;
-import java.util.logging.Logger;
 
 public class AppointmentForm extends AppCompatActivity {
 
@@ -105,7 +103,7 @@ public class AppointmentForm extends AppCompatActivity {
 //            AppModel appoint = new AppModel(lar);
             databaseAppoint.child(id).setValue(appointments);
 //            databaseAppoint.child(id).setValue(appoint);
-            startActivity(new Intent(AppointmentForm.this,FormSubmission.class));
+            startActivity(new Intent(AppointmentForm.this, FormSubmission.class));
 
 
 //            root.child("sos").child(citizenId).setValue(1);

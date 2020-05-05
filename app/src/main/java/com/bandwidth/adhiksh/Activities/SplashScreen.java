@@ -1,10 +1,12 @@
-package com.bandwidth.adhiksh;
+package com.bandwidth.adhiksh.Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+
+import com.bandwidth.adhiksh.R;
 
 public class SplashScreen extends AppCompatActivity {
 

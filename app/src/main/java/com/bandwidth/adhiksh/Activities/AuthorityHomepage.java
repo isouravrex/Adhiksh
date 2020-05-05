@@ -1,4 +1,4 @@
-package com.bandwidth.adhiksh;
+package com.bandwidth.adhiksh.Activities;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
@@ -18,6 +18,10 @@ import android.widget.ImageView;
 
 import com.bandwidth.adhiksh.Fragments.AppointmentFragment;
 import com.bandwidth.adhiksh.Fragments.ComplaintFragment;
+import com.bandwidth.adhiksh.Fragments.FragmentFir;
+import com.bandwidth.adhiksh.Fragments.FragmentNoc;
+import com.bandwidth.adhiksh.R;
+import com.bandwidth.adhiksh.views.map;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
 import com.valdesekamdem.library.mdtoast.MDToast;

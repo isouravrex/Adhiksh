@@ -1,4 +1,4 @@
-package com.bandwidth.adhiksh;
+package com.bandwidth.adhiksh.Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
+import com.bandwidth.adhiksh.views.CitizenHomepage;
+import com.bandwidth.adhiksh.R;
 import com.google.android.material.button.MaterialButton;
 
 public class FormSubmission extends AppCompatActivity {
